@@ -6,14 +6,14 @@ import { Menu, X } from "lucide-react"; // Import icons for the menu toggle
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
-      <nav className="grid grid-cols-[6fr_1fr] lg:grid-cols-[1fr_2fr] lg:pr-0 px-6 sm:px-12 py-4 bg-white border-b">
+      <nav className="grid grid-cols-[14fr_1fr] lg:grid-cols-[1fr_2fr] justify-between p-4 lg:pr-0 py-4 bg-white border-b">
         <div>
-          <img src="/logo.png" alt="MyCareTaker Logo" className="w-32 lg:w-44 lg:h-16 lg:mb-4" />
+          <img src="/logo.png" alt="MyCareTaker Logo" className="w-32 lg:w-44 lg:h-16 lg:mb-4 justify-self-center lg:justify-self-start lg:ml-8" />
         </div>
         {/* Hamburger Button (Hidden on larger screens) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-gray-800 focus:outline-none mt-2 ml-3"
+          className="lg:hidden text-gray-800 focus:outline-none mt-2 lg:ml-3 justify-self-end mr-4"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>

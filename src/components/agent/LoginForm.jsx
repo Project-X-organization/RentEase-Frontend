@@ -10,10 +10,10 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex flex-col justify-start items-center bg-white w-full h-full py-16">
-      <div className="bg-white shadow-md rounded-lg px-16 py-12 w-full h-full flex flex-col justify-start">
-        <h2 className="text-5xl font-bold text-gray-700 text-center my-4">Sign in</h2>
-        <p className="text-2xl text-gray-500 text-center mt-2">Welcome back!</p>
+    <div className="flex flex-col justify-start items-center bg-white w-full h-full py-2 lg:py-16">
+      <div className="bg-white shadow-md rounded-lg px-2 lg:px-16 py-12 w-full h-full flex flex-col justify-start">
+        <h2 className="text-3xl lg:text-5xl font-bold text-gray-700 text-center my-4">Sign in</h2>
+        <p className="text-lg lg:text-2xl text-gray-500 text-center mt-2">Welcome back!</p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="mt-8 w-full max-w-2xl mx-auto">
           <div className="space-y-6">
@@ -44,7 +44,7 @@ export default function LoginForm() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white rounded-lg py-4 text-2xl font-semibold"
+              className="w-full hover:bg-blue-900 hover:scale-105 bg-blue-600 text-white rounded-lg py-4 text-2xl font-semibold"
             >
               Log in
             </button>

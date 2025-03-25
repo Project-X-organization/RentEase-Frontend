@@ -20,8 +20,8 @@ export default function AgentVerification() {
   return (
     <div className="min-h-screen flex bg-gray-50 p-4 sm:p-8">
       <div className="bg-white p-6 sm:p-10 shadow-lg rounded-lg flex flex-col lg:flex-row w-full">
-        <div className="w-full lg:w-[100%] pr-4">
-          <img src="/logo.png" alt="Logo" className="w-40 sm:w-48 h-auto mb-6 sm:mb-10 ml-2 mt-5" />
+        <div className="w-full lg:w-[100%] ">
+          <img src="/logo.png" alt="Logo" className="lg:w-40 w-28 sm:w-48 h-auto mb-6 sm:mb-10 lg:ml-2 lg:mt-5 mx-auto" />
 
           {/*<p className="text-green-700 font-medium text-lg bg-green-100 px-4 py-2 rounded-md mb-4">
             Your uploaded documents will be reviewed, and you will receive an email confirmation within 48 hours.
@@ -70,10 +70,9 @@ export default function AgentVerification() {
 
             {/* Buttons */}
             <div className="mt-6 lg:w-[65%]">
-              <button type="submit" className="w-full bg-blue-600 text-white text-lg font-semibold py-3 rounded-lg">
-                Submit for Review
+              <button type="submit" className="w-full bg-blue-600 text-white text-lg font-semibold py-3 rounded-lg hover:bg-blue-900 hover:scale-105">                Submit for Review
               </button>
-              <button type="button" className="w-full bg-gray-200 text-blue-600 mt-3 py-2 rounded-lg text-lg">
+              <button type="button" className="w-full bg-gray-200 text-blue-600 mt-3 py-2 rounded-lg text-lg hover:bg-gray-100 hover:scale-105">
                 <a href="/">Back to Sign up</a>
               </button>
             </div>
