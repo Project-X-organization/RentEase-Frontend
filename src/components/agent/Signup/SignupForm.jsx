@@ -39,7 +39,7 @@ export default function SignupForm() {
   const onSubmit = (data) => {
     console.log("User Signed Up:", data);
     alert("User Sign Up Successful!");
-    navigate("/login"); // Redirect to login page
+    navigate("/agent/login"); // Redirect to login page
   };
 
   return (

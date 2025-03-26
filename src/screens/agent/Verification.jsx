@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import UploadBox from "../../components/agent/UploadBox";
-import FormField from "../../components/agent/FormField";
+import UploadBox from "../../components/agent/Verification/UploadBox";
+import FormField from "../../components/agent/Verification/FormField";
 
 export default function AgentVerification() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();

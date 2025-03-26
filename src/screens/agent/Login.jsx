@@ -1,4 +1,4 @@
-import LoginForm from "../../components/agent/LoginForm";
+import LoginForm from "../../components/agent/Login/LoginForm";
 
 export default function AgentLogin() {
   return (
