@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       primary: ["Poppins", "sans-serif"],
+      poly: ["Poly", "serif"]
     },
     extend: {},
   },
