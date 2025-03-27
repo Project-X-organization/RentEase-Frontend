@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import InputField from "../../components/user/InputField";
-import Section from "../../components/user/Section";
+import InputField from "../../components/user/Rental-agreenent/InputField";
+import Section from "../../components/user/Rental-agreenent/Section";
 
 export default function RentalAgreement() {
     const {

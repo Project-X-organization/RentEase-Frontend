@@ -3,6 +3,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 
 const schema = yup.object().shape({
   firstName: yup.string().required("First Name is required"),
@@ -34,12 +36,14 @@ export default function SignupForm() {
     resolver: yupResolver(schema),
   });
 
+  const [showPassword, setShowPassword] = useState(false);
+
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log("User Signed Up:", data);
     alert("User Sign Up Successful!");
-    navigate("/login"); // Redirect to login page
+    navigate("/agent/login"); // Redirect to login page
   };
 
   return (
@@ -111,26 +115,32 @@ export default function SignupForm() {
             </div>
 
             {/* Password */}
-            <div>
+            <div className="relative">
               <label className="block text-lg font-medium">Password</label>
               <input
-                type="password"
+                type={showPassword ? "text":"password"}
                 {...register("password")}
                 className="w-full border rounded p-3 text-lg"
                 placeholder="Enter password"
               />
+              <span className="absolute right-4 top-1/2 mt-4 transform -translate-y-1/2 cursor-pointer" onClick={() =>{setShowPassword((prev) => (!prev))}}>
+                {showPassword ? <Eye size={20} />: <EyeOff size={20} />}
+              </span>
               <p className="text-red-500 text-sm">{errors.password?.message}</p>
             </div>
 
             {/* Confirm Password */}
-            <div>
+            <div className="relative">
               <label className="block text-lg font-medium">Confirm Password</label>
               <input
-                type="password"
+                type={showPassword ? "text":"password"}
                 {...register("confirmPassword")}
                 className="w-full border rounded p-3 text-lg"
                 placeholder="Confirm your password"
               />
+              <span className="absolute right-4 top-1/2 mt-4 transform -translate-y-1/2 cursor-pointer" onClick={() =>{setShowPassword((prev) => (!prev))}}>
+                {showPassword ? <Eye size={20} />: <EyeOff size={20} />}
+              </span>
               <p className="text-red-500 text-sm">{errors.confirmPassword?.message}</p>
             </div>
 

@@ -1,12 +1,18 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Eye, EyeOff } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function LoginForm() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = (data) => {
     console.log("User Logged In:", data);
+    alert("User Login Successful!");
+    navigate("/agent/verification"); // Redirect to login page
   };
 
   return (
@@ -27,14 +33,17 @@ export default function LoginForm() {
               <p className="text-red-500 text-sm">{errors.email?.message}</p>
             </div>
 
-            <div>
+            <div className="relative">
               <label className="block text-lg font-medium">Password</label>
               <input
-                type="password"
+                type={showPassword ? "text":"password"}
                 {...register("password", { required: "Password is required" })}
                 className="w-full border rounded-lg p-4 text-xl"
                 placeholder="Enter your password"
               />
+              <span className="absolute right-4 top-1/2 mt-4 transform -translate-y-1/2 cursor-pointer" onClick={() =>{setShowPassword((prev) => (!prev))}}>
+                {showPassword ? <Eye size={20} />: <EyeOff size={20} />}
+              </span>
               <p className="text-red-500 text-sm">{errors.password?.message}</p>
             </div>
 
@@ -50,7 +59,7 @@ export default function LoginForm() {
             </button>
 
             <p className="text-lg text-gray-500 text-center mt-6">
-              Don't have an account? <a href="/" className="text-blue-500 font-semibold">Sign up</a>
+              Don't have an account? <Link to="/agent/signup" className="text-blue-500 font-semibold hover:text-blue-800 hover:text-xl">Sign up</Link>
             </p>
           </div>
         </form>

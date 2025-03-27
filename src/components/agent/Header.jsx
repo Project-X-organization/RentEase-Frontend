@@ -32,7 +32,7 @@ export default function Header({ agentEmail }) {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-14 right-4 bg-white text-blue-800 shadow-md rounded-md w-52 py-2 lg:hidden">
+        <div className="absolute z-10 top-14 right-4 bg-white text-blue-800 shadow-md rounded-md w-52 py-2 lg:hidden">
           <Link to="#" className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Manage Property  ▾</Link>
           <span className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Agent: {agentEmail}</span>
           <Link to="#" className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Logout ↗</Link>

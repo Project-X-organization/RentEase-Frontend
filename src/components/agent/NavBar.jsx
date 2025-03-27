@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Import icons for the menu toggle
+import FadeInSection from "../FadeInSection";
 
 // components/Navbar.js
 export default function Navbar() {
@@ -25,11 +26,11 @@ export default function Navbar() {
         </div>
         {/* Navbar Links - Mobile View (Dropdown) */}
         {isOpen && (
-          <div className="lg:hidden flex flex-col space-y-3 text-center mt-4 text-gray-800 font-medium text-lg ml-8">
-            <Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>Help</Link>
-            <Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>Terms and Conditions</Link>
-            <Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>FAQs</Link>
-            <Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>Contact us</Link>
+          <div className="absolute z-10 top-32 left-0 w-full bg-gray-900 bg-opacity-90 flex flex-col items-center py-6 space-y-6 text-white lg:hidden transition-all duration-300">
+            <FadeInSection type="slideRight"><Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>Help</Link></FadeInSection>
+            <FadeInSection type="slideLeft"><Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>Terms and Conditions</Link></FadeInSection>
+            <FadeInSection type="slideRight"><Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>FAQs</Link></FadeInSection>
+            <FadeInSection type="slideLeft"><Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>Contact us</Link></FadeInSection>
           </div>
         )}
       </nav>
