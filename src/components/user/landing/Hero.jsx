@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import FadeInSection from "../../FadeInSection";
 
 const HeroSection = () => {
@@ -21,9 +22,9 @@ const HeroSection = () => {
 
           {/* Responsive Button Container */}
           <div className="flex justify-center lg:justify-start lg:mt-0 mt-12  lg:ml-12">
-            <button className="lg:mt-12 px-4 py-2 sm:px-6 sm:py-3 lg:px-6 lg:py-3 bg-green-600 border border-white rounded-md text-sm sm:text-base lg:text-xl text-white hover:bg-green-900 hover:px-6 hover:py-4 lg:hover:px-12 lg:hover:py-6 transition-all duration-300">
+            <Link to="/signup" className="lg:mt-12 px-4 py-2 sm:px-6 sm:py-3 lg:px-6 lg:py-3 bg-green-600 border border-white rounded-md text-sm sm:text-base lg:text-xl text-white hover:bg-green-900 hover:px-6 hover:py-4 lg:hover:px-12 lg:hover:py-6 transition-all duration-300">
               Get Started
-            </button>
+            </Link>
           </div>
         </FadeInSection>
       </div>

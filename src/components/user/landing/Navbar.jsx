@@ -24,7 +24,7 @@ const Navbar = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden lg:block">
-          <Link to="/agent" className="text-white bg-green-600 px-4 py-2 rounded-md hover:bg-green-900 hover:px-6 hover:py-4">Agent</Link>
+          <Link to="/agent/signup" className="text-white bg-green-600 px-4 py-2 rounded-md hover:bg-green-900 hover:px-6 hover:py-4">Agent</Link>
           <Link to="/login" className="ml-2 text-white border border-white px-4 py-2 rounded-md hover:text-green-200 hover:px-6 hover:py-4">Login</Link>
         </div>
 
