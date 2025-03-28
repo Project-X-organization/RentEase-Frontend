@@ -45,7 +45,7 @@ const Navbar = () => {
 
           {/* Mobile Buttons */}
           <div className="flex flex-col space-y-4 mt-4">
-            <Link to="/agent" className="text-white bg-green-600 px-6 py-2 rounded-md hover:bg-green-900" onClick={() => setIsOpen(false)}>Agent</Link>
+            <Link to="/agent/signup" className="text-white bg-green-600 px-6 py-2 rounded-md hover:bg-green-900" onClick={() => setIsOpen(false)}>Agent</Link>
             <Link to="/login" className="text-white border border-white px-6 py-2 rounded-md hover:text-green-200" onClick={() => setIsOpen(false)}>Login</Link>
           </div>
         </div>

@@ -22,7 +22,7 @@ export default function RentalAgreement() {
 
   return (
     <div className="min-h-screen bg-gray-50 p-2 lg:p-8 flex justify-center">
-      <div className="bg-white max-w-6xl w-full mx-auto p-2 lg:p-8 shadow-md rounded-lg">
+      <div className="bg-white max-w-6xl w-full mx-auto p-4 lg:p-8 shadow-md rounded-lg">
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between lg:items-center mb-6">
           <img src="/logo.png" alt="Logo" className="w-28 lg:w-48 h-auto mb-4 mx-auto lg:ml-2" />

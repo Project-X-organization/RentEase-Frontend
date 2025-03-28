@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import FormContainer from "../../components/user/FormContainer";
-import FormField from "../../components/user/FormField";
-import BottomButtons from "../../components/user/BottomButtons";
+import FormContainer from "../../components/user/3-Forms/FormContainer";
+import FormField from "../../components/user/3-Forms/FormField";
+import BottomButtons from "../../components/user/3-Forms/BottomButtons";
+import { Link } from "react-router-dom";
 
 const schema = yup.object().shape({
     fullName: yup.string().required("Full Name is required"),
@@ -34,7 +35,7 @@ const UserSignUp = () => {
     {
         console.log("User Account Creation successful", data);
         alert("User Account Creation successful");
-        navigate("/login");//navigate to login page
+        navigate("/verifyOTP");//navigate to OTP vVerification page
     };
 
     return (
@@ -53,6 +54,7 @@ const UserSignUp = () => {
                 />
                 <p className="text-sm lg:text-lg text-black">if you do not wish to receive marketing information about our products and special offers, please check this box</p></div>
                 <BottomButtons label="Create Account"/>
+                <p className="text-center lg:text-lg mb-12 mt-[-40px]">Already have an account? <Link to="/login" className="text-green-500 hover:text-xl hover:text-green-800">Login</Link></p>
             </form>
         </FormContainer>
     );

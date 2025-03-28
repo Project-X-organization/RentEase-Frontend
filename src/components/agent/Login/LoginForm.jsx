@@ -17,7 +17,7 @@ export default function LoginForm() {
 
   return (
     <div className="flex flex-col justify-start items-center bg-white w-full h-full py-2 lg:py-16">
-      <div className="bg-white shadow-md rounded-lg px-2 lg:px-16 py-12 w-full h-full flex flex-col justify-start">
+      <div className="bg-white shadow-md rounded-lg px-3 lg:px-16 py-12 w-full h-full flex flex-col justify-start">
         <h2 className="text-3xl lg:text-5xl font-bold text-gray-700 text-center my-4">Sign in</h2>
         <p className="text-lg lg:text-2xl text-gray-500 text-center mt-2">Welcome back!</p>
 
@@ -27,7 +27,7 @@ export default function LoginForm() {
               <label className="block text-lg font-medium">Email Address</label>
               <input
                 {...register("email", { required: "Email is required" })}
-                className="w-full border rounded-lg p-4 text-xl"
+                className="w-full border rounded-lg lg:p-4 p-2 text-xl"
                 placeholder="Enter your email"
               />
               <p className="text-red-500 text-sm">{errors.email?.message}</p>
@@ -38,7 +38,7 @@ export default function LoginForm() {
               <input
                 type={showPassword ? "text":"password"}
                 {...register("password", { required: "Password is required" })}
-                className="w-full border rounded-lg p-4 text-xl"
+                className="w-full border rounded-lg lg:p-4 p-2 text-xl"
                 placeholder="Enter your password"
               />
               <span className="absolute right-4 top-1/2 mt-4 transform -translate-y-1/2 cursor-pointer" onClick={() =>{setShowPassword((prev) => (!prev))}}>
@@ -53,7 +53,7 @@ export default function LoginForm() {
 
             <button
               type="submit"
-              className="w-full hover:bg-blue-900 hover:scale-105 bg-blue-600 text-white rounded-lg py-4 text-2xl font-semibold"
+              className="w-full hover:bg-blue-900 hover:scale-105 bg-blue-600 text-white rounded-lg lg:py-4 py-2 lg:text-2xl text-lg font-semibold"
             >
               Log in
             </button>

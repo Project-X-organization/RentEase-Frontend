@@ -49,7 +49,7 @@ export default function AgentDashboard({ agent="MyCareTaker@gmail.com", user="Es
         {/* Right Section - User Info */}
         <div className="hidden lg:block lg:w-1/3 text-right pr-12">
           <h3 className="text-lg font-semibold">Logged in:</h3>
-          <p className="text-gray-600 font-medium">{user}</p>
+          <p className="text-gray-600 font-medium my-3">{user}</p>
           <Link to="/edit-profile" className="text-blue-500 hover:text-blue-800 hover:text-lg">Edit Profile</Link>
         </div>
       </div></FadeInSection>
