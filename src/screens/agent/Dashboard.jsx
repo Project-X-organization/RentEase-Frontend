@@ -23,11 +23,11 @@ export default function AgentDashboard({ agent="MyCareTaker@gmail.com", user="Es
         <div className="space-y-6 lg:w-2/3 w-full">
           <FadeInSection type="slideUp"><div className="flex justify-center">
             <hr className="lg:w-[42%] w-[20%] bg-gray-400 h-1 mt-4 mr-4"/>
-            <h2 className="text-xl text-blue-500 font-bold">New Listings</h2>
+            <h2 className="text-xl text-blue-600 font-bold">New Listings</h2>
             <hr className="lg:w-[42%] w-[20%] bg-gray-400 h-1 mt-4 ml-4 mb-4"/>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <Card title="New" count={0} link="/new" />
+            <Card title="New" count={0} link="/agent/dashboard/new-listing" />
             <Card title="Submitted" count={3} link="/submitted" />
             <Card title="Queried" count={1} link="/queried" />
             <Card title="Approved" count={15} link="/approved" />
@@ -35,7 +35,7 @@ export default function AgentDashboard({ agent="MyCareTaker@gmail.com", user="Es
 
           <FadeInSection type="slideDown"><div className="flex justify-center">
             <hr className="lg:w-[40%] w-[18%] bg-gray-400 h-1 mt-4 mr-4"/>
-            <h2 className="text-xl text-blue-500 font-bold">Existing Listings</h2>
+            <h2 className="text-xl text-blue-600 font-bold">Existing Listings</h2>
             <hr className="lg:w-[42%] w-[18%] bg-gray-400 h-1 mt-4 ml-4 mb-4"/>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

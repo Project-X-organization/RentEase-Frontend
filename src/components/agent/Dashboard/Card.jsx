@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import FadeInSection from "../../FadeInSection";
+
 // Card Component
 export default function Card({ title, count, link }) {
     return (

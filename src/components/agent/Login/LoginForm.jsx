@@ -11,7 +11,7 @@ export default function LoginForm() {
 
   const onSubmit = (data) => {
     console.log("User Logged In:", data);
-    alert("User Login Successful!");
+    alert("Agent Login Successful!");
     navigate("/agent/verification"); // Redirect to login page
   };
 

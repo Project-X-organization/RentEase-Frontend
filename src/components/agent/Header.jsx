@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { MoreVertical, X } from "lucide-react";
+import { MoreVertical, X, LogOut } from "lucide-react";
 
 // Header Component
 export default function Header({ agentEmail }) {
@@ -14,9 +14,9 @@ export default function Header({ agentEmail }) {
         <button className="text-white">Manage Property ▾</button>
       </div>
 
-      <div className="hidden lg:grid lg:text-right grid-cols-[4fr_1fr] mr-8">
+      <div className="hidden lg:grid lg:text-right grid-cols-[4fr_1fr]">
         <span>Agent: {agentEmail}</span>
-        <Link to="/" className="lg:ml-4 text-white hover:scale-110 hover:text-red-400">Log out ↗</Link>
+        <Link to="/" className="flex lg:ml-4 text-white hover:scale-110 hover:text-red-400"><span className="mx-2">Log out</span> <LogOut /></Link>
       </div>
 
       {/* Mobile Layout */}
@@ -35,7 +35,7 @@ export default function Header({ agentEmail }) {
         <div className="absolute z-10 top-14 right-4 bg-white text-blue-800 shadow-md rounded-md w-52 py-2 lg:hidden">
           <Link to="#" className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Manage Property  ▾</Link>
           <span className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Agent: {agentEmail}</span>
-          <Link to="/" className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Logout ↗</Link>
+          <Link to="/" className="block flex px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}><span className="mr-2">Logout </span><LogOut/></Link>
         </div>
       )}
     </header>
