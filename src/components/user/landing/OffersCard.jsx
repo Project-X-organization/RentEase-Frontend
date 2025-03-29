@@ -1,6 +1,6 @@
 const OfferCard = ({ image, title, location, price }) => {
     return (
-      <div className="bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.25),0px_-4px_10px_rgba(0,0,0,0.1)] text-sm lg:text-lg rounded-md w-full transition-all duration-300 hover:scale-110 hover:text-green-900 hover:text-xl hover:pb-4">
+      <div className={`bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.25),0px_-4px_10px_rgba(0,0,0,0.1)] text-sm lg:text-lg rounded-md w-full transition-all duration-300 hover:scale-110 hover:text-green-900 hover:text-xl hover:pb-4`}>
         <img src={image} alt={title} className="rounded-md mb-3 w-full h-40 lg:h-64 object-cover" />
         <h3 className="font-semibold px-4">{title}</h3>
         <p className="flex text-gray-600 lg:px-4 px-2 my-2 text-sm lg:text-lg">
