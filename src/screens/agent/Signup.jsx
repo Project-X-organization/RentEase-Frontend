@@ -6,7 +6,7 @@ export default function AgentSignup() {
       {/* Left Side (Logo + Banner) */}
       <div className="lg:w-1/2 flex flex-col relative">
         {/* Logo at the top left */}
-        <img src="/logo.png" alt="Logo" className="w-28 lg:w-48 h-auto mb-5 lg:ml-8 lg:mt-5 mt-4 mx-auto" />
+        <img src="/logo.png" alt="Logo" className="w-28 lg:w-40 h-auto mb-5 lg:ml-8 lg:mt-5 mt-4 mx-auto" />
 
         {/* Banner (slightly smaller than form) */}
         <div className="flex-grow flex">

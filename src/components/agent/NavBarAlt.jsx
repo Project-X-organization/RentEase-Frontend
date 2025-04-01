@@ -26,7 +26,7 @@ export default function Navbar() {
         </div>
         {/* Navbar Links - Mobile View (Dropdown) */}
         {isOpen && (
-          <div className="absolute z-10 top-[134px] left-0 w-full bg-gray-900 bg-opacity-90 flex flex-col items-center py-6 space-y-6 text-white lg:hidden transition-all duration-300">
+          <div className="absolute z-10 top-[75px] left-0 w-full bg-gray-900 bg-opacity-90 flex flex-col items-center py-6 space-y-6 text-white lg:hidden transition-all duration-300">
             <FadeInSection type="slideRight"><Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>Help</Link></FadeInSection>
             <FadeInSection type="slideLeft"><Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>Terms and Conditions</Link></FadeInSection>
             <FadeInSection type="slideRight"><Link to="#" className="hover:text-blue-500 hover:scale-110" onClick={() => setIsOpen(false)}>FAQs</Link></FadeInSection>

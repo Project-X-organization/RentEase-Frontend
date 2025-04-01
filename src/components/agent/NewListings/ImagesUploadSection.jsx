@@ -105,7 +105,7 @@ const ImageUploadSection = ({ register, setValue, clearErrors, errors, getValues
                 {/* Custom Upload Button */}
                 <label
                   htmlFor={`file-upload-${img.id}`}
-                  className="cursor-pointer flex items-center lg:space-x-2 bg-blue-600 text-white justify-center px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                  className="cursor-pointer flex items-center lg:space-x-2 bg-[#4F4FFF] text-white justify-center px-4 py-2 rounded-md hover:bg-blue-700 transition"
                 >
                   <FaUpload className="lg:text-lg text-xs" />
                   <span>Upload</span>

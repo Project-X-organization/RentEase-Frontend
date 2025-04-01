@@ -9,7 +9,7 @@ const CuboidButton = () => {
       {/* Main Button */}
       <Link 
         to="/your-link"
-        className="relative px-4 py-2 lg:px-6 lg:py-3 bg-green-600 text-white font-bold lg:text-lg lg:hover:text-xl rounded-md shadow-lg hover:bg-green-800 transition-all z-1"
+        className="relative px-4 py-2 lg:px-6 lg:py-3 bg-[#015A05] text-white font-bold lg:text-lg lg:hover:text-xl rounded-md shadow-lg hover:bg-green-800 transition-all z-1"
       >
         Check available houses
       </Link>

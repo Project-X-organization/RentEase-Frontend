@@ -28,7 +28,7 @@ export default function AgentVerification() {
             Your uploaded documents will be reviewed, and you will receive an email confirmation within 48 hours.
           </p>*/}
 
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-600 mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#4F4FFF] mb-6 sm:mb-8">
             Kindly Upload Documents for Verification
           </h2>
 
@@ -71,9 +71,9 @@ export default function AgentVerification() {
 
             {/* Buttons */}
             <div className="mt-6 lg:w-[65%]">
-              <button type="submit" className="w-full bg-blue-600 text-white text-lg font-semibold py-3 rounded-lg hover:bg-blue-900 hover:scale-105">                Submit for Review
+              <button type="submit" className="w-full bg-[#4F4FFF] text-white text-lg font-semibold py-3 rounded-lg hover:bg-blue-900 hover:scale-105">                Submit for Review
               </button>
-              <Link to="/agent/signup"><button type="button" className="w-full bg-gray-200 text-blue-600 mt-3 py-2 rounded-lg text-lg hover:bg-gray-100 hover:scale-105">
+              <Link to="/agent/signup"><button type="button" className="w-full bg-gray-200 text-[#4F4FFF] mt-3 py-2 rounded-lg text-lg hover:bg-gray-100 hover:scale-105">
                 Back to Sign up
               </button></Link>
             </div>

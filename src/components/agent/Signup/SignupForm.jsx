@@ -146,7 +146,7 @@ export default function SignupForm() {
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className="w-full bg-blue-600 text-white rounded lg:py-3 py-2 text-lg flex items-center justify-center gap-2 hover:scale-105 hover:bg-blue-900 mt-2">
+            <button type="submit" className="w-full bg-[#4F4FFF] text-white rounded lg:py-3 py-2 text-base flex items-center justify-center gap-2 hover:scale-105 hover:bg-blue-900 mt-2">
               <FaRegCheckCircle /> Continue
             </button>
 

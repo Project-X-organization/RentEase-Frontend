@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 // Footer Component
 export default function Footer() {
     return (
-      <footer className="bg-green-950 text-white lg:p-16 p-3 mt-4">
-        <div className="grid grid-cols-4 lg:grid-cols-[2fr_1fr_1fr_1fr] text-xs lg:text-lg">
-          <div className="flex text-white font-bold lg:text-xl"><img src="/icon.png" className="lg:w-[10%] lg:h-[40%] w-[24%] h-[24%] "/><p className="lg:mt-8 lg:ml-2 mt-3">MyCareTaker</p></div>
+      <footer className="bg-green-950 text-white lg:p-16 p-6 mt-4">
+        <div className="grid grid-cols-4 lg:grid-cols-[2fr_1fr_1fr_1fr] text-[10px] lg:text-lg">
+          <div className="flex text-white font-bold lg:text-xl"><img src="/icon.png" className="lg:w-[10%] lg:h-[40%] w-[24%] h-[20%] "/><p className="lg:mt-8 lg:ml-2 mt-3 mr-2">MyCareTaker</p></div>
           <div className="flex flex-col space-y-2 ml-4">
             <h3 className="font-bold">Quick Links</h3>
             <Link to="/about" className="hover:text-black hover:text-sm lg:hover:text-xl">About Us</Link>

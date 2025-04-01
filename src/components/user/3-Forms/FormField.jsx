@@ -7,7 +7,7 @@ export default function FormField({ label, placeholder, type="text",  register, 
 
     return (
       <div className="mb-5 relative">
-        <label className="block text-lg font-semibold text-green-700 mb-1">{label}</label>
+        <label className="block lg:text-lg font-semibold text-[#001501] mb-1">{label}</label>
   
         <input
             type={isTypePassword && showPassword ? "text" : type}

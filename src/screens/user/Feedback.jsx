@@ -31,7 +31,7 @@ export default function Feedback() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between lg:items-center mb-6">
           <img src="/logo.png" alt="Logo" className="w-28 lg:w-48 h-auto mb-4  lg:ml-2" />
-          <h1 className="lg:text-3xl text-2xl font-bold text-green-600 text-center lg:ml-[-6%]">Feedback Survey</h1>
+          <h1 className="lg:text-3xl text-2xl font-bold text-[#428242] text-center lg:ml-[-6%]">Feedback Survey</h1>
           <Link to="/home" className="flex text-green-500 hover:text-green-900 justify-center absolute top-9 right-5 lg:relative lg:top-0 lg:right-0"><span className="lg:mr-2">Back to Home</span><LogOut/></Link>
         </div>
 

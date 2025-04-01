@@ -12,7 +12,7 @@ export default function LoginForm() {
   const onSubmit = (data) => {
     console.log("User Logged In:", data);
     alert("Agent Login Successful!");
-    navigate("/agent/verification"); // Redirect to login page
+    navigate("/agent/verification"); // Redirect to Verification page
   };
 
   return (
@@ -48,12 +48,12 @@ export default function LoginForm() {
             </div>
 
             <div className="flex justify-end text-md">
-              <a href="#" className="text-blue-500">Forgot Password?</a>
+              <Link to="#" className="text-blue-500">Forgot Password?</Link>
             </div>
 
             <button
               type="submit"
-              className="w-full hover:bg-blue-900 hover:scale-105 bg-blue-600 text-white rounded-lg lg:py-4 py-2 lg:text-2xl text-lg font-semibold"
+              className="w-full hover:bg-blue-900 hover:scale-105 bg-[#4F4FFF] text-white rounded-lg lg:py-4 py-2 lg:text-2xl text-base font-semibold"
             >
               Log in
             </button>

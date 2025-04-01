@@ -7,7 +7,7 @@ export default function Header({ agentEmail }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-blue-600 text-white lg:text-lg p-4 lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-center relative">
+    <header className="bg-[#4F4FFF] text-white lg:text-lg p-4 lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-center relative">
       {/* Desktop Layout (Unchanged) */}
       <div className="hidden lg:grid grid-cols-[1fr_3fr] justify-items-start">
         <span className="font-semibold">Dashboard</span>

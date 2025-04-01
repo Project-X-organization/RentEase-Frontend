@@ -40,7 +40,7 @@ const UserSignUp = () => {
 
     return (
         <FormContainer>
-            <h1 className="text-center text-green-800 lg:text-4xl text-2xl font-bold my-8 lg:my-4 lg:mb-12">Create an account</h1>
+            <h1 className="text-center text-[#015A05] lg:text-4xl text-2xl font-bold my-8 lg:my-4 lg:mb-12">Create an account</h1>
             <form onSubmit={handleSubmit(onsubmit)} className="w-full mx-auto">
                 <FormField label="Full Name" placeholder="Enter your full name" name="fullName" register={register} errors={errors} />
                 <FormField label="Email Address" placeholder="Enter your email address" name="email" type="email" register={register} errors={errors} />
