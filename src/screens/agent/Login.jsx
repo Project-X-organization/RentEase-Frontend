@@ -11,7 +11,7 @@ export default function AgentLogin() {
         {/* Banner (slightly smaller than form) */}
         <div className="flex-grow flex">
           <img
-            src="/banner.png"
+            src="/Form-banner.png"
             alt="Signup Banner"
             className="rounded-lg lg:w-full h-[85%] mt-5 lg:ml-5 mx-auto"
           />

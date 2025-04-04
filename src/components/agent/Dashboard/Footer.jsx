@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 // Footer Component
 export default function Footer() {
     return (
-      <footer className="bg-[#4F4FFF] text-white p-8 mt-4">
+      <footer className="bg-green-950 text-white p-8 mt-4">
         <div className="grid grid-cols-4 lg:grid-cols-[2fr_1fr_1fr_1fr] text-[10px] lg:text-lg">
           <img src="/footer-logo.png" alt="Footer Logo" className="w-48 h-auto mb-5 lg:ml-8 mt-5" />
           <div className="flex flex-col space-y-2 ml-4">

@@ -50,7 +50,7 @@ export default function SignupForm() {
   return (
     <div className="flex flex-col items-center bg-white h-[90%] w-full lg:p-6 lg:mt-5 py-8">
       <div className="bg-white shadow-md rounded-lg lg:p-2 px-3 lg:px-6 py-6 lg:p-6 w-full h-full flex flex-col justify-center lg:py-24">
-        <h2 className="text-3xl lg:text-5xl font-bold text-gray-700 text-center mb-4 mt-4">Sign Up</h2>
+        <h2 className="text-3xl lg:text-5xl font-bold text-[#428242] text-center mb-4 mt-4">Sign Up</h2>
         <p className="text-lg lg:text-2xl text-gray-500 text-center mb-6">
           Sign up and become an agent today
         </p>
@@ -60,14 +60,14 @@ export default function SignupForm() {
             {/* First Name */}
             <div>
               <label className="block text-lg font-medium">First Name</label>
-              <input {...register("firstName")} className="w-full border rounded lg:p-3 p-2 text-lg" placeholder="Enter first name" />
+              <input {...register("firstName")} className="w-full border border-[#14AE5C] rounded lg:p-3 p-2 text-lg" placeholder="Enter first name" />
               <p className="text-red-500 text-sm">{errors.firstName?.message}</p>
             </div>
 
             {/* Last Name */}
             <div>
               <label className="block text-lg font-medium">Last Name</label>
-              <input {...register("lastName")} className="w-full border rounded lg:p-3 p-2 text-lg" placeholder="Enter last name" />
+              <input {...register("lastName")} className="w-full border border-[#14AE5C] rounded lg:p-3 p-2 text-lg" placeholder="Enter last name" />
               <p className="text-red-500 text-sm">{errors.lastName?.message}</p>
             </div>
 
@@ -75,8 +75,8 @@ export default function SignupForm() {
             <div>
               <label className="block text-lg font-medium">Phone Number</label>
               <div className="flex border rounded">
-                <span className="lg:p-3 p-2 bg-gray-200 text-lg">+234</span>
-                <input {...register("phone")} className="w-full lg:p-3 p-2 text-lg" placeholder="7012345969" />
+                <span className="lg:p-3 p-2 bg-[#428242] text-lg text-white">+234</span>
+                <input {...register("phone")} className="w-full lg:p-3 border border-[#14AE5C] p-2 text-lg" placeholder="7012345969" />
               </div>
               <p className="text-red-500 text-sm">{errors.phone?.message}</p>
             </div>
@@ -84,14 +84,14 @@ export default function SignupForm() {
             {/* Email Address */}
             <div>
               <label className="block text-lg font-medium">Email Address</label>
-              <input {...register("email")} className="w-full border rounded lg:p-3 p-2 text-lg" placeholder="example@gmail.com" />
+              <input {...register("email")} className="w-full border border-[#14AE5C] rounded lg:p-3 p-2 text-lg" placeholder="example@gmail.com" />
               <p className="text-red-500 text-sm">{errors.email?.message}</p>
             </div>
 
             {/* State */}
             <div>
               <label className="block text-lg font-medium">State</label>
-              <select {...register("state")} className="w-full border rounded lg:p-3 p-2 text-lg">
+              <select {...register("state")} className="w-full border border-[#14AE5C] rounded lg:p-3 p-2 text-lg">
                 <option value="">Select State</option>
                 <option value="Imo">Imo</option>
                 <option value="Lagos">Lagos</option>
@@ -102,14 +102,14 @@ export default function SignupForm() {
             {/* City */}
             <div>
               <label className="block text-lg font-medium">City/Town</label>
-              <input {...register("city")} className="w-full border rounded lg:p-3 p-2 text-lg" placeholder="Enter City" />
+              <input {...register("city")} className="w-full border border-[#14AE5C] rounded lg:p-3 p-2 text-lg" placeholder="Enter City" />
               <p className="text-red-500 text-sm">{errors.city?.message}</p>
             </div>
 
             {/* Country */}
             <div>
               <label className="block text-lg font-medium">Country</label>
-              <select {...register("country")} className="w-full border rounded lg:p-3 p-2 text-lg">
+              <select {...register("country")} className="w-full border border-[#14AE5C] rounded lg:p-3 p-2 text-lg">
                 <option value="Nigeria">Nigeria</option>
               </select>
               <p className="text-red-500 text-sm">{errors.country?.message}</p>
@@ -121,7 +121,7 @@ export default function SignupForm() {
               <input
                 type={showPassword ? "text":"password"}
                 {...register("password")}
-                className="w-full border rounded lg:p-3 p-2 text-lg"
+                className="w-full border border-[#14AE5C] rounded lg:p-3 p-2 text-lg"
                 placeholder="Enter password"
               />
               <span className="absolute right-4 top-1/2 mt-4 transform -translate-y-1/2 cursor-pointer" onClick={() =>{setShowPassword((prev) => (!prev))}}>
@@ -136,7 +136,7 @@ export default function SignupForm() {
               <input
                 type={showPassword ? "text":"password"}
                 {...register("confirmPassword")}
-                className="w-full border rounded lg:p-3 p-2 text-lg"
+                className="w-full border border-[#14AE5C] rounded lg:p-3 p-2 text-lg"
                 placeholder="Confirm your password"
               />
               <span className="absolute right-4 top-1/2 mt-4 transform -translate-y-1/2 cursor-pointer" onClick={() =>{setShowPassword((prev) => (!prev))}}>
@@ -146,7 +146,7 @@ export default function SignupForm() {
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className="w-full bg-[#4F4FFF] text-white rounded lg:py-3 py-2 text-base flex items-center justify-center gap-2 hover:scale-105 hover:bg-blue-900 mt-2">
+            <button type="submit" className="w-full bg-[#428242] text-white rounded lg:py-3 py-2 text-base flex items-center justify-center gap-2 hover:scale-105 hover:bg-green-700 mt-2">
               <FaRegCheckCircle /> Continue
             </button>
 
@@ -156,7 +156,7 @@ export default function SignupForm() {
               <Link to="#" className="text-blue-500 underline">Terms & Conditions</Link>
             </p>
             
-            <p className="text-center lg:text-lg mb-12 mt-410px]">Already have an account? <Link to="/agent/login" className="text-blue-500 font-semibold hover:text-xl hover:text-blue-800">Login</Link></p>
+            <p className="text-center lg:text-lg mb-12 mt-410px]">Already have an account? <Link to="/agent/login" className="text-[#428242] font-semibold hover:text-xl hover:text-green-800">Login</Link></p>
 
           </div>
         </form>

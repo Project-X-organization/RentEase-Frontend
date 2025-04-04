@@ -6,7 +6,7 @@ const ApprovedCard = ({ image, title, location, duration,  }) => {
         <img src={image} alt={title} className="rounded-md mb-3 lg:mb-0 w-full h-44 lg:h-64 object-cover" />
         <div className="flex flex-col justify-between lg:ml-4">
             <div className="grid lg:grid-cols-[3fr_1fr] lg:mt-16">
-                <div><h3 className="font-semibold lg:px-4 lg:text-xl lg:mt-2">{title}</h3>
+                <div><h3 className="font-semibold lg:px-4 lg:text-xl">{title}</h3>
                 <p className="flex lg:px-4 lg:px-2 my-2 text-md lg:text-xl">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ const ApprovedCard = ({ image, title, location, duration,  }) => {
                 {location}</p></div>
                 <div>
                     <div className="text-center justify-self-end">
-                        <Link className="bg-[#4F4FFF] rounded-md lg:px-8 lg:py-4 p-2 text-sm lg:text-md text-white hover:scale-110 hover:bg-blue-700">Approved</Link>
+                        <Link className="bg-[#428242] rounded-md lg:px-8 lg:py-4 p-2 text-sm lg:text-md text-white hover:scale-110 hover:bg-green-700">Approved</Link>
                     </div>
                     <p className="text-right lg:mt-6 mt-4 text-sm lg:text-md">Uploaded {duration}</p>
                 </div>

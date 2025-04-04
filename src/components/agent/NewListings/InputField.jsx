@@ -9,7 +9,7 @@ const InputField = ({ label, name, type = "text", placeholder, options, register
           <input
             {...register(name, { required: `${label} is required` })}
             type="text"
-            className="w-full border border-gray-400 focus:border-black focus:outline-none px-2 lg:py-4 py-2 lg:text-xl mt-2 lg:mt-4"
+            className="w-full border border-[#14AE5C] focus:border-black focus:outline-none px-2 lg:py-4 py-2 lg:text-xl mt-2 lg:mt-4"
             placeholder={placeholder}
           />
         )}
@@ -18,7 +18,7 @@ const InputField = ({ label, name, type = "text", placeholder, options, register
         {type === "textarea" && (
           <textarea
             {...register(name, { required: `${label} is required` })}
-            className="w-full border border-gray-400 focus:border-black focus:outline-none px-2 py-2 h-28 lg:h-40 mt-2 lg:mt-4"
+            className="w-full border border-[#14AE5C] focus:border-black focus:outline-none px-2 py-2 h-28 lg:h-40 mt-2 lg:mt-4"
           />
         )}
   
@@ -26,7 +26,7 @@ const InputField = ({ label, name, type = "text", placeholder, options, register
         {type === "select" && (
           <select
             {...register(name, { required: `${label} is required` })}
-            className="w-full border border-gray-300 rounded p-2 lg:py-4 mt-2 lg:mt-4"
+            className="w-full border border-[#14AE5C] rounded p-2 lg:py-4 mt-2 lg:mt-4"
           >
             <option value="">Select one</option>
             {options.map((option, index) => (

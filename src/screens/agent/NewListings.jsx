@@ -73,7 +73,7 @@ const NewListings = ({ agent = "MyCareTaker@gmail.com" }) => {
             <FadeInSection type="slideDown">
                 <div className="flex lg:px-12 mt-8 lg:my-8">
                     <hr className="lg:w-[32%] w-[30%] bg-gray-400 h-1 mt-4 mr-4" />
-                    <h2 className="text-xl text-[#4F4FFF] font-bold">New Listing</h2>
+                    <h2 className="text-xl text-[#428242] font-bold">New Listing</h2>
                 </div>
 
                 {/* Navigation Buttons */}
@@ -90,7 +90,7 @@ const NewListings = ({ agent = "MyCareTaker@gmail.com" }) => {
                                 {section}
                             </button>
                             {index < sections.length - 1 && (
-                                <MoveRightIcon size={140} strokeWidth={0.5} className="text-blue-200" />
+                                <MoveRightIcon size={140} strokeWidth={0.5} className="text-[#428242]" />
                             )}
                         </>
                     ))}
@@ -108,7 +108,7 @@ const NewListings = ({ agent = "MyCareTaker@gmail.com" }) => {
                                 {section}
                             </button>
                             {index < sections.length - 1 && (
-                                <MoveDownIcon size={40} strokeWidth={0.5} className="text-blue-800" />
+                                <MoveDownIcon size={40} strokeWidth={0.5} className="text-[#428242]" />
                             )}
                         </>
                     ))}
@@ -128,7 +128,7 @@ const NewListings = ({ agent = "MyCareTaker@gmail.com" }) => {
                     {activeIndex > 0 && (
                         <button
                             type="button"
-                            className="flex items-center lg:py-3 lg:px-6 p-2 bg-[#4F4FFF] text-white lg:text-lg rounded hover:bg-blue-400 transition"
+                            className="flex items-center lg:py-3 lg:px-6 p-2 bg-[#428242] text-white lg:text-lg rounded hover:bg-green-700 transition"
                             onClick={handleBack}
                         >
                             <ChevronLeft />
@@ -139,7 +139,7 @@ const NewListings = ({ agent = "MyCareTaker@gmail.com" }) => {
                     {activeIndex < sections.length - 1 ? (
                         <button
                             type="button"
-                            className="lg:py-3 lg:px-6 p-2 bg-[#4F4FFF] text-white lg:text-lg rounded hover:bg-blue-700 transition ml-auto"
+                            className="lg:py-3 lg:px-6 p-2 bg-[#428242] text-white lg:text-lg rounded hover:bg-green-700 transition ml-auto"
                             onClick={handleNext}
                         >
                             Save & Continue
@@ -147,7 +147,7 @@ const NewListings = ({ agent = "MyCareTaker@gmail.com" }) => {
                     ) : (
                         <button
                             type="submit"
-                            className="lg:py-3 lg:px-6 py-2 px-4 bg-green-600 text-white lg:text-lg rounded hover:bg-green-700 transition ml-auto"
+                            className="lg:py-3 lg:px-6 py-2 px-4 bg-[#428242] text-white lg:text-lg rounded hover:bg-green-700 transition ml-auto"
                         >
                             Submit
                         </button>

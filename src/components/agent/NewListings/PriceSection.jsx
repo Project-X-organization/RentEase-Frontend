@@ -7,7 +7,7 @@ const PriceSection = ({ register, errors }) => {
                     <span className="text-2xl font-semibold mr-4">&#8358;</span>
                     <input {...register("annualRent", { required: "This Field is required" })}
                         type="numner"
-                        className="w-[48] border border-gray-400 focus:border-black focus:outline-none px-1 py-1 lg:text-xl"/>
+                        className="w-[48] border border-[#14AE5C] focus:border-black focus:outline-none px-1 py-1 lg:text-xl"/>
                     {/* Error Message */}
                     {errors.annualRent && <p className="text-red-500 text-sm mt-1">{errors.annualRent?.message}</p>}
                 </div>
@@ -18,7 +18,7 @@ const PriceSection = ({ register, errors }) => {
                     <span className="text-2xl font-semibold mr-4">&#8358;</span>
                     <input {...register("otherCharges", { required: "This Field is required" })}
                         type="numner"
-                        className="w-[48] border border-gray-400 focus:border-black focus:outline-none px-1 py-1 lg:text-xl"/>
+                        className="w-[48] border border-[#14AE5C] focus:border-black focus:outline-none px-1 py-1 lg:text-xl"/>
                     {/* Error Message */}
                     {errors.otherCharges && <p className="text-red-500 text-sm mt-1">{errors.otherCharges?.message}</p>}
                 </div>
@@ -31,7 +31,7 @@ const PriceSection = ({ register, errors }) => {
                         <span className="text-2xl font-semibold mr-4">&#8358;</span>
                         <input {...register("serviceCharges", { required: "This Field is required" })}
                         type="numner"
-                        className="w-[48] border border-gray-400 focus:border-black focus:outline-none px-1 py-1 lg:text-xl"/>
+                        className="w-[48] border border-[#14AE5C] focus:border-black focus:outline-none px-1 py-1 lg:text-xl"/>
                         {/* Error Message */}
                         {errors.serviceCharges && <p className="text-red-500 text-sm mt-1">{errors.serviceCharges?.message}</p>}
                     </div>
@@ -42,7 +42,7 @@ const PriceSection = ({ register, errors }) => {
                         <span className="text-2xl font-semibold mr-4">&#8358;</span>
                         <input {...register("grandTotal", { required: "This Field is required" })}
                         type="numner"
-                        className="w-[48] border border-gray-400 focus:border-black focus:outline-none px-1 py-1 lg:text-xl"/>
+                        className="w-[48] border border-[#14AE5C] focus:border-black focus:outline-none px-1 py-1 lg:text-xl"/>
                         {/* Error Message */}
                         {errors.grandTotal && <p className="text-red-500 text-sm mt-1">{errors.grandTotal?.message}</p>}
                     </div>

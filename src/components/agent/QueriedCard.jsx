@@ -26,7 +26,7 @@ const QueriedCard = ({ image, title, location, query, queryTitle,  }) => {
                 <div>
                     <p className="text-sm text-red-500 lg:text-lg"><span className="font-bold mr-1">{queryTitle}</span>{query}</p>
                     <div className="text-center justify-self-end mt-8">
-                        <Link className="bg-[#4F4FFF] rounded-md lg:px-8 lg:py-4 px-4 py-2 text-sm lg:text-md text-white hover:scale-110 hover:bg-blue-700">Resolve</Link>
+                        <Link className="bg-[#428242] rounded-md lg:px-8 lg:py-4 px-4 py-2 text-sm lg:text-md text-white hover:scale-110 hover:bg-green-700">Resolve</Link>
                     </div>
                 </div>
             </div>

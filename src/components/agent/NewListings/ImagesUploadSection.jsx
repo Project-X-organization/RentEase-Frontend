@@ -54,7 +54,7 @@ const ImageUploadSection = ({ register, setValue, clearErrors, errors, getValues
   };
 
   return (
-    <div className="max-w-full mb-12 lg:mx-auto lg:p-12 p-4 mx-4 border border-blue-600 lg:pr-36">
+    <div className="max-w-full mb-12 lg:mx-auto lg:p-12 p-4 mx-4 border border-[#14AE5C] lg:pr-36">
       {/* Table Header */}
       <div className="grid grid-cols-3 gap-4 justify-items-center lg:text-xl pb-2 font-semibold lg:mb-4">
         <span>Image</span>
@@ -75,13 +75,13 @@ const ImageUploadSection = ({ register, setValue, clearErrors, errors, getValues
                 value={newLabel}
                 onChange={(e) => setNewLabel(e.target.value)}
                 placeholder="Image Name..."
-                className="border-b border-gray-400 text-xl focus:border-blue-600 focus:outline-none px-2 py-1"
+                className="border-b border-gray-400 text-xl focus:border-[#428242] focus:outline-none px-2 py-1"
               />
             ) : (
               <button
                 type="button"
                 onClick={() => setAddingRow(true)}
-                className="text-blue-600 font-semibold text-left lg:mt-2"
+                className="text-[#428242] font-semibold text-left lg:mt-2"
               >
                 {img.label}
               </button>
@@ -105,7 +105,7 @@ const ImageUploadSection = ({ register, setValue, clearErrors, errors, getValues
                 {/* Custom Upload Button */}
                 <label
                   htmlFor={`file-upload-${img.id}`}
-                  className="cursor-pointer flex items-center lg:space-x-2 bg-[#4F4FFF] text-white justify-center px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                  className="cursor-pointer flex items-center lg:space-x-2 bg-[#428242] text-white justify-center px-4 py-2 rounded-md hover:bg-green-700 transition"
                 >
                   <FaUpload className="lg:text-lg text-xs" />
                   <span>Upload</span>
@@ -131,7 +131,7 @@ const ImageUploadSection = ({ register, setValue, clearErrors, errors, getValues
               <button
                 type="button"
                 onClick={confirmAddRow}
-                className="text-white bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                className="text-white bg-[#428242] px-4 py-2 rounded-md hover:bg-green-700 transition"
               >
                 Confirm
               </button>

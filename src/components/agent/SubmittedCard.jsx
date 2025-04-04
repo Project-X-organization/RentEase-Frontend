@@ -26,8 +26,8 @@ const SubmittedCard = ({ image, title, location, duration, delay }) => {
                 {location}</p></div>
                 <div>
                     <div className="grid grid-cols-2 gap-4 text-center ">
-                        <Link className="bg-[#4F4FFF] rounded-md lg:px-8 lg:py-4 py-2 lg:text-md text-white hover:scale-110 hover:bg-blue-700">Edit</Link>
-                        <Link className="border border-black rounded-md text-red-500 lg:px-8 lg:py-4 py-2 lg:text-md hover:scale-110 hover:bg-gray-200">Delete</Link>
+                        <Link className="bg-[#428242] rounded-md lg:px-8 lg:py-4 py-2 lg:text-md text-white hover:scale-110 hover:bg-green-700">Edit</Link>
+                        <Link className="border border-black rounded-md text-red-500 lg:px-8 lg:py-4 py-2 lg:text-md hover:scale-110 hover:bg-[#EFFFF4]">Delete</Link>
                     </div>
                     <p className="text-right lg:mt-6 mt-2 text-sm lg:text-md">Uploaded {duration}</p>
                 </div>

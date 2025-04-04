@@ -7,7 +7,7 @@ export default function Header({ agentEmail }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-[#4F4FFF] text-white lg:text-lg p-4 lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-center relative">
+    <header className="bg-[#428242] text-white lg:text-lg p-4 lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-center relative">
       {/* Desktop Layout (Unchanged) */}
       <div className="hidden lg:grid grid-cols-[1fr_3fr] justify-items-start">
         <span className="font-semibold">Dashboard</span>
@@ -32,7 +32,7 @@ export default function Header({ agentEmail }) {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute z-10 top-14 right-4 bg-white text-blue-800 shadow-md rounded-md w-52 py-2 lg:hidden">
+        <div className="absolute z-10 top-14 right-4 bg-white text-[#428242] shadow-md rounded-md w-52 py-2 lg:hidden">
           <Link to="#" className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Manage Property  ▾</Link>
           <span className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Agent: {agentEmail}</span>
           <Link to="/" className="block flex px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}><span className="mr-2">Logout </span><LogOut/></Link>
