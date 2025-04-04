@@ -19,6 +19,7 @@
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^7.4.0",
+    "react-to-pdf": "^2.0.0",
     "yup": "^1.6.1"
   },
   "devDependencies": {
