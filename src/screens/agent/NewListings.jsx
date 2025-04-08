@@ -54,7 +54,7 @@ const NewListings = ({ agent = "MyCareTaker@gmail.com" }) => {
           navigate("/agent/dashboard");
         });
       
-      };
+    };
       
 
     const onSubmit = (data) => {

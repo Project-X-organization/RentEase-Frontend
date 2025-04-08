@@ -10,7 +10,7 @@ const animations = {
   slideDown: { initial: { y: -100, opacity: 0 }, animate: { y: 0, opacity: 1 } },
 };
 
-const FadeInSection = ({ children, delay = 0, type = "fade" }) => {
+const FadeInSection = ({ children, delay = 0, type = "fade", className }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -22,7 +22,7 @@ const FadeInSection = ({ children, delay = 0, type = "fade" }) => {
       initial={animations[type].initial}
       animate={inView ? animations[type].animate : {}}
       transition={{ duration: 2, delay }}
-      className="relative"
+      className={`relative ${className}`}
     >
       {children}
     </motion.section>
