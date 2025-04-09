@@ -7,7 +7,7 @@ import FadeInSection from "../FadeInSection";
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
-      <nav className="grid grid-cols-[14fr_1fr] lg:grid-cols-[1fr_2fr] justify-between p-4 lg:pr-0 py-4 bg-white">
+      <nav className="grid grid-cols-[14fr_1fr] lg:grid-cols-2 justify-between p-4 lg:pr-0 py-4 bg-white">
         <div>
           <img src="/logo.png" alt="MyCareTaker Logo" className="w-32 lg:w-44 lg:h-16 lg:mb-4 justify-self-center lg:justify-self-start lg:ml-8" />
         </div>
@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link to="#" className="hover:text-[#428242] hover:scale-110">Help</Link>
           <Link to="#" className="hover:text-[#428242] hover:scale-110">Terms and Conditions</Link>
           <Link to="#" className="hover:text-[#428242] hover:scale-110">FAQs</Link>
-          <Link to="#" className="hover:text-[#428242] hover:scale-110">Contact us</Link>
+          <Link to="#" className="hover:text-[#428242] hover:scale-110 justify-self-start">Contact us</Link>
         </div>
         {/* Navbar Links - Mobile View (Dropdown) */}
         {isOpen && (

@@ -6,29 +6,65 @@ const Pending = ({name, setOpacity}) => {
         setOpacity(true);
         const customAlert = document.createElement("div");
         customAlert.innerHTML = `
-          <div style="
-            position: fixed; top: 40%; left: 50%; transform: translateX(-50%);
-            background: white; color: black; padding: 12px 20px; border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000; font-size: 16px; width: 30%; height: 20%
-            display: flex; flex-direction: column; align-items: center; justify-content: space-around; padding-left: auto; padding-right: auto; padding-top: 2%;
-          ">
-            <span style="font-weight: 600; font-size: 20px; margin-left: 37%; ">Are You Sure</span>
-            <div style="display: flex; justify-content: space-around; margin-top: 15%; margin-left: 14%; margin-bottom: 5%;">
-            <button id="closeAlert" style="
-             background: #14AE5C; color: white; border: none; 
-              padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 20px; margin-right: 10%;
-            ">Yes</button>
-            <button id="closeAlert" style="
-               background: #F24822; color: white; border: none; 
-              padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 20px; margin-left: 14%;
-            ">No</button><div>
-          </div>
+            <div style="
+                position: fixed; 
+                top: 30%; 
+                left: 50%; 
+                transform: translateX(-50%);
+                background: white; 
+                color: black; 
+                padding: 16px 24px; 
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+                z-index: 1000; 
+                font-size: 16px; 
+                width: 90%; 
+                max-width: 400px; 
+                display: flex; 
+                flex-direction: column; 
+                align-items: center;
+                gap: 100px;
+                text-align: center;
+            ">
+                <span style="font-weight: 600; font-size: 20px;">Are You Sure?</span>
+    
+                <div style="
+                    display: flex; 
+                    justify-content: space-between; 
+                    width: 100%; 
+                    max-width: 250px;
+                    gap: 100px;
+                ">
+                    <button id="confirmYes" style="
+                        flex: 1;
+                        background: #14AE5C; 
+                        color: white; 
+                        border: none; 
+                        padding: 10px 0; 
+                        border-radius: 4px; 
+                        cursor: pointer; 
+                        font-size: 16px;
+                    ">Yes</button>
+
+                    <button id="confirmNo" style="
+                        flex: 1;
+                        background: #F24822; 
+                        color: white; 
+                        border: none; 
+                        padding: 10px 0;         
+                        border-radius: 4px; 
+                        cursor: pointer; 
+                        font-size: 16px;
+                    ">No</button>
+                </div>
+            </div>
         `;
+
       
         document.body.appendChild(customAlert);
       
         // Close alert when "OK" button is clicked
-        document.getElementById("closeAlert").addEventListener("click", () => {
+        document.getElementById("confirmYes").addEventListener("click", () => {
           customAlert.remove();
           setOpacity(false);
           navigate("/agent/dashboard");
@@ -89,9 +125,9 @@ const Pending = ({name, setOpacity}) => {
     return (
         <FadeInSection type="slideRight" className="grid grid-cols-4 lg:grid-cols-[2fr_1fr_1fr_1fr] lg:gap-4 space-y-12 mx-auto">
             <label className="lg:pl-16 pl-4 mt-12 lg:text-lg">{name}</label>
-            <button className="flex"><Eye className="mr-2" />View</button>
-            <button className="flex text-[#14AE5C]" onClick={showCustomAlert}>Approve<Check className="ml-2" /></button>
-            <button className="flex text-[#F24822]" onClick={showRejectAlert}>Reject<X className="ml-2" /></button>
+            <button className="flex hover:text-xl"><Eye className="mr-2" />View</button>
+            <button className="flex text-[#14AE5C] hover:text-xl" onClick={showCustomAlert}>Approve<Check className="ml-2" /></button>
+            <button className="flex text-[#F24822] hover:text-xl" onClick={showRejectAlert}>Reject<X className="ml-2" /></button>
         </FadeInSection>
     );
 };

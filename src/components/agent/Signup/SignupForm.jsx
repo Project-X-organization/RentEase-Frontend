@@ -118,30 +118,30 @@ export default function SignupForm() {
             {/* Password */}
             <div className="relative">
               <label className="block text-lg font-medium">Password</label>
-              <input
+              <div className="relative"><input
                 type={showPassword ? "text":"password"}
                 {...register("password")}
                 className="w-full border border-[#14AE5C] rounded lg:p-3 p-2 text-lg"
                 placeholder="Enter password"
               />
-              <span className="absolute right-4 top-1/2 mt-4 transform -translate-y-1/2 cursor-pointer" onClick={() =>{setShowPassword((prev) => (!prev))}}>
+              <span className="absolute right-4 lg:top-1/4 top-2 mt-4 transform -translate-y-1/2 cursor-pointer" onClick={() =>{setShowPassword((prev) => (!prev))}}>
                 {showPassword ? <Eye size={20} />: <EyeOff size={20} />}
-              </span>
+              </span></div>
               <p className="text-red-500 text-sm">{errors.password?.message}</p>
             </div>
 
             {/* Confirm Password */}
             <div className="relative">
               <label className="block text-lg font-medium">Confirm Password</label>
-              <input
+              <div className="relative"><input
                 type={showPassword ? "text":"password"}
                 {...register("confirmPassword")}
                 className="w-full border border-[#14AE5C] rounded lg:p-3 p-2 text-lg"
                 placeholder="Confirm your password"
               />
-              <span className="absolute right-4 top-1/2 mt-4 transform -translate-y-1/2 cursor-pointer" onClick={() =>{setShowPassword((prev) => (!prev))}}>
+              <span className="absolute right-4 lg:top-1/4 top-2 mt-4 transform -translate-y-1/2 cursor-pointer" onClick={() =>{setShowPassword((prev) => (!prev))}}>
                 {showPassword ? <Eye size={20} />: <EyeOff size={20} />}
-              </span>
+              </span></div>
               <p className="text-red-500 text-sm">{errors.confirmPassword?.message}</p>
             </div>
 

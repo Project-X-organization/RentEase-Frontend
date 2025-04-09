@@ -49,7 +49,7 @@ const OTPVerification = ({ onVerify, email }) => {
             value={value}
             onChange={(e) => handleChange(index, e.target.value)}
             onKeyDown={(e) => handleKeyDown(index, e)}
-            className="w-8 h-12 lg:w-20 lg:h-24 text-center lg:text-3xl font-bold border rounded bg-green-200 focus:ring focus:ring-green-500"
+            className="w-8 h-12 lg:w-20 lg:h-24 text-center lg:text-3xl font-bold border rounded bg-green-50 focus:ring focus:ring-green-500"
           />
         ))}
       </form>

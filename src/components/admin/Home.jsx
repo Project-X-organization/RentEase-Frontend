@@ -15,13 +15,13 @@ const Home = ( { setOpacity }) => {
     ]
     const [idx, setIdx] = useState(0);
     return (
-        <FadeInSection type="slideDown" className="lg:w-[72%] w-full relative z-10"><div className="w-full lg:py-16 lg:px-20">
-            <h1 className="lg:mb-20 mb-12 lg:text-xl ml-8 lg:ml-0 mt-12 lg:mt-0">Welcome Back, <span className="font-semibold">Esther</span></h1>
-            <div className="grid grid-cols-3 lg:gap-60 lg:mx-24 mx-8">{sections.map((section, index) => (
+        <FadeInSection type="slideDown" className="lg:w-[72%] w-full relative z-10"><div className="w-full py-8 lg:py-16 lg:px-20">
+            <h1 className="lg:mb-20 mb-12 lg:text-xl ml-8 lg:ml-0 lg:mt-0">Welcome Back, <span className="font-semibold">Esther</span></h1>
+            <div className="grid grid-cols-3 lg:gap-60 lg:mx-24 mx-8">{sections.map((section, i) => (
                 <button
-                    key={index}
-                    className={` lg:text-xl ${idx === index ? "font-semibold border-b-4 border-black" : ""}`}
-                    onClick={() => setIdx(index)}
+                    key={i}
+                    className={` lg:text-xl hover:scale-110 ${idx === i ? "font-semibold border-b-4 border-black" : ""}`}
+                    onClick={() => setIdx(i)}
                 >
                     {section}
                 </button>
