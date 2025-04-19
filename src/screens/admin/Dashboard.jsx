@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X, User, LayoutDashboard, BriefcaseBusiness, Settings } from "lucide-react";
 import SideBar from "../../components/admin/Sidebar";
 import Home from "../../components/admin/Home";
+import ProfilePage from "../../components/admin/Profile";
 import FadeInSection from "../../components/FadeInSection";
 
 const AdminDashboard = () => {
@@ -19,8 +20,9 @@ const AdminDashboard = () => {
     const user = "Esther";
 
     return (
-        <div className="lg:flex relative">
+        <div className="lg:flex relative pt-4 lg:pt-0">
             {opacity && <div className="absolute inset-0 bg-black bg-opacity-50 z-50 min-h-screen"></div>}
+            <img src="/logo.png" alt="MyCareTaker Logo" className="lg:hidden w-32 top-8 mx-auto mb-4"/>
             {showSidebar === false && <button className="lg:hidden absolute z-50 top-8 right-8" onClick={() => {
                 setShowSidebar(true);
                 setOpacity(true);
@@ -34,6 +36,7 @@ const AdminDashboard = () => {
                 }}><X/></button></FadeInSection></div>}
             <SideBar menus={menus} activeIndex={activeIndex} setActiveIndex={setActiveIndex} admin={admin} className="lg:block hidden"/>
             {activeIndex === 0 && <Home setOpacity={setOpacity} />}
+            {activeIndex === 1 && <ProfilePage admin={admin}/>}
         </div>
     );
 };

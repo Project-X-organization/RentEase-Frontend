@@ -4,7 +4,7 @@ import FadeInSection from "../FadeInSection";
 
 const SideBar = ({menus, activeIndex, setActiveIndex, admin, className}) => {
     return (
-        <FadeInSection type="slideLeft" className={`lg:w-[23%] lg:z-0 ${className}`}><div className="flex flex-col w-full min-h-screen bg-[#F9FCFF] px-2">
+        <FadeInSection type="slideLeft" className={`lg:w-[23%] lg:z-0 ${className}`}><div className="flex flex-col lg:fixed h-screen lg:w-[23%] lg:min-w-[300px] bg-[#F9FCFF] px-2">
             <img src="/logo.png" alt="MyCareTaker Logo" className="w-32 lg:w-48 lg:h-16 mt-4 mb-12" />
             <div className="flex-grow">{menus.map((menu, index) => (
                 <button

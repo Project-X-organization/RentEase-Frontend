@@ -1,4 +1,6 @@
 import Pending from "./Pending";
+import Approved from "./Approved";
+import Deleted from "./Deleted";
 import { useState } from "react";
 import FadeInSection from "../FadeInSection";
 
@@ -12,7 +14,17 @@ const Home = ( { setOpacity }) => {
         {name: "Elisha Olawoye"},
         {name: "Obinna Chukwuemeka"},
         {name: "Tolu Adebisi"},
-    ]
+    ];
+    const approvals = [
+        {name: "Elisha Olawoye"},
+        {name: "Obinna Chukwuemeka"},
+        {name: "Tolu Adebisi"},
+    ];
+    const deletions = [
+        {name: "Elisha Olawoye", deleted_at: "3 mins ago"},
+        {name: "Obinna Chukwuemeka", deleted_at: "2 hrs ago"},
+        {name: "Tolu Adebisi", deleted_at: "3 days ago"},
+    ];
     const [idx, setIdx] = useState(0);
     return (
         <FadeInSection type="slideDown" className="lg:w-[72%] w-full relative z-10"><div className="w-full py-8 lg:py-16 lg:px-20">
@@ -28,6 +40,12 @@ const Home = ( { setOpacity }) => {
             ))}</div>
             {idx === 0 && requests.map((request, index) => (
                 <Pending key={index} {...request} setOpacity={setOpacity}/>
+            ))}
+            {idx === 1 && approvals.map((approval, index) => (
+                <Approved key={index} {...approval} setOpacity={setOpacity}/>
+            ))}
+            {idx === 2 && deletions.map((deletion, index) => (
+                <Deleted key={index} {...deletion}/>
             ))}
         </div></FadeInSection>
     );

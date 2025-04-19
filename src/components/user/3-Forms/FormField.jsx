@@ -12,7 +12,7 @@ export default function FormField({ label, placeholder, type="text",  register, 
         <div className="relative"><input
             type={isTypePassword && showPassword ? "text" : type}
             {...register(name)}
-            className="w-full border border-[#14AE5C] rounded p-2 lg:placeholder:text-lg lg:h-16 bg-transparent"
+            className="w-full border border-[#14AE5C] rounded p-2 lg:placeholder:text-lg lg:h-16 bg-gray-200"
             placeholder={placeholder}
         />
 

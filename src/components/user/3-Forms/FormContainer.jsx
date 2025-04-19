@@ -9,7 +9,7 @@ const FormContainer = ({children}) => {
                     <img src="/icon.png" alt="Logo" />
                     <p className="lg:ml-2 mt-4">MyCareTaker</p>
                 </div>
-                <div className="bg-white lg:w-[60%] mx-auto my-auto lg:px-16 lg:py-20 p-4 pb-8">{children}</div>
+                <div className="bg-white bg-opacity-75 rounded-3xl lg:w-[60%] mx-auto my-auto lg:px-16 lg:py-20 p-4 pb-8">{children}</div>
             </div>
         </div>
     );
