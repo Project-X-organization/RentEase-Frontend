@@ -5,6 +5,7 @@ import UserSignUp from "../screens/user/SignUp";
 import UserLogin from "../screens/user/Login";
 import VerifyOTP from "../screens/user/VerifyOTP";
 import Feedback from "../screens/user/Feedback";
+import TermsAndConditionsScreen from "../screens/TermsAndConditions";
 
 const UserRoutes = () => {
     return (
@@ -15,6 +16,7 @@ const UserRoutes = () => {
             <Route path="/verifyOTP" element={<VerifyOTP />}/>
             <Route path="/rental-agreement" element={<RentalAgreement />} />
             <Route path="/feedback" element={<Feedback />}/>
+            <Route path="terms-and-conditions" element={<TermsAndConditionsScreen/>} />
         </Routes>
     );
 };

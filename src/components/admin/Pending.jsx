@@ -125,9 +125,9 @@ const Pending = ({name, setOpacity}) => {
     return (
         <FadeInSection type="slideRight" className="grid grid-cols-4 lg:grid-cols-[2fr_1fr_1fr_1fr] lg:gap-20 space-y-12 mx-auto">
             <label className="lg:pl-16 pl-4 mt-12 lg:text-lg">{name}</label>
-            <button className="flex justify-center hover:text-xl lg:min-w-[50%]"><Eye className="mr-2" />View</button>
-            <button className="flex justify-center text-[#14AE5C] hover:text-xl lg:min-w-[55%]" onClick={showCustomAlert}>Approve<Check className="ml-2" /></button>
-            <button className="flex justify-center text-[#F24822] hover:text-xl lg:min-w-[55%] mr-4" onClick={showRejectAlert}>Reject<X className="ml-2" /></button>
+            <button className="flex justify-center hover:text-xl"><Eye className="mr-2" />View</button>
+            <button className="flex justify-center text-[#14AE5C] hover:text-xl" onClick={showCustomAlert}>Approve<Check className="ml-2" /></button>
+            <button className="flex justify-center text-[#F24822] hover:text-xl mr-4" onClick={showRejectAlert}>Reject<X className="ml-2" /></button>
         </FadeInSection>
     );
 };

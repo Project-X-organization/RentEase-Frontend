@@ -5,7 +5,7 @@
   import { UserRoundPen, Edit2 } from 'lucide-react';
   import FadeInSection from '../FadeInSection';
 
-  const ProfilePage = ({admin}) => {
+  const ProfilePage = () => {
     const [profileImage, setProfileImage] = useState(null);           // preview image
     const [savedImage, setSavedImage] = useState(null);               // final saved image
     const [showImageControls, setShowImageControls] = useState(false);
@@ -151,7 +151,7 @@
               <img
                 src={savedImage}
                 alt="Large View"
-                className="max-w-[80%] max-h-[80%] rounded shadow-lg"
+                className="max-w-[80%] max-h-[80%] rounded shadow-lg bg-black"
                 onClick={(e) => e.stopPropagation()}
               />
             </div>

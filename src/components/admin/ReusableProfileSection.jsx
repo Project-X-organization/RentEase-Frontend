@@ -52,28 +52,26 @@ const ReusableProfileSection = ({ title, fields, onChange, onSave, delay }) => {
         <h2 className="lg:text-xl font-semibold text-[#015A05]">{title}</h2>
         <div className="space-x-2">
         {isEditing ? (
-  <div className="flex gap-2">
-    {modifiedFields.length > 0 && (
-      <button
-        onClick={handleCancel}
-        className="px-4 py-1 rounded text-white bg-gray-500 hover:bg-gray-600"
-      >
-        Cancel
-      </button>
-    )}
-    <button
-      onClick={handleSave}
-      disabled={modifiedFields.length === 0}
-      className={`px-4 py-1 rounded text-white ${
-        modifiedFields.length === 0
-          ? 'bg-green-300 cursor-not-allowed'
-          : 'bg-green-600 hover:bg-green-700'
-      }`}
-    >
-      Save
-    </button>
-  </div>
-) : (
+          <div className="flex gap-2">
+            <button
+              onClick={handleCancel}
+              className="px-4 py-1 rounded text-white bg-gray-500 hover:bg-gray-600"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleSave}
+              disabled={modifiedFields.length === 0}
+              className={`px-4 py-1 rounded text-white ${
+                modifiedFields.length === 0
+                  ? 'bg-green-300 cursor-not-allowed'
+                  : 'bg-green-600 hover:bg-green-700'
+              }`}
+            >
+              Save
+            </button>
+          </div>
+        ) : (
             <button onClick={() => setIsEditing(true)} className="flex bg-[#04D20D] hover:bg-green-700 text-white lg:px-4 px-2 py-1 rounded hover:scale-110">Edit<Edit2 className='ml-2 w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 my-auto'/></button>
           )}
         </div>
