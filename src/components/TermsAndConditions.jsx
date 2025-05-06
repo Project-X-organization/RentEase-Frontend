@@ -1,11 +1,12 @@
 import { BookTextIcon } from "lucide-react";
+import { MdLibraryBooks } from "react-icons/md";
 import FadeInSection from "./FadeInSection";
 
 const TsAndCs = () => {
     return (
         <div className="py-4">
-            <FadeInSection type="slideDown"><BookTextIcon size={80} className="mx-auto text-[#14AE5C] hidden lg:block"/>
-            <BookTextIcon size={40} className="mx-auto text-[#14AE5C] lg:hidden"/>
+            <FadeInSection type="slideDown"><MdLibraryBooks size={80} className="mx-auto text-[#14AE5C] hidden lg:block"/>
+            <MdLibraryBooks size={40} className="mx-auto text-[#14AE5C] lg:hidden"/>
             <div className="flex lg:mx-8 lg:mt-8 items-center justify-center px-4">
                 <div className="flex-1 flex items-center justify-center">
                     <div className="w-2 h-2 bg-[#14AE5C] rounded-full"></div>

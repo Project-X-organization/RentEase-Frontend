@@ -15,18 +15,18 @@ import DeletedListings from "../screens/agent/DeletedListings";
 const AgentRoutes = () => {
     return (
         <Routes>
-            <Route path="/signup" element={<AgentSignup/>} />
-            <Route path="/login" element={<AgentLogin/>} />
-            <Route path="/verification" element={<AgentVerification/>} />
-            <Route path="/dashboard" element={<AgentDashboard/>} />
-            <Route path="/dashboard/new-listing" element={<NewListings />}/>
-            <Route path="/dashboard/submitted-listings" element={<SubmittedListings />}/>
-            <Route path="/dashboard/queried-listings" element={<QueriedListings />} />
-            <Route path="/dashboard/approved-listings" element={<ApprovedListings />} />
-            <Route path="/dashboard/edit-existing-listings" element={<EditExistingListings />} />
-            <Route path="/dashboard/letting-listings" element={<ListedListings />} />
-            <Route path="/dashboard/rented-listings" element={<RentedListings />} />
-            <Route path="/dashboard/deleted-listings" element={<DeletedListings />} />
+            <Route path="signup" element={<AgentSignup/>} />
+            <Route path="login" element={<AgentLogin/>} />
+            <Route path="verification" element={<AgentVerification/>} />
+            <Route path="dashboard" element={<AgentDashboard/>} />
+            <Route path="dashboard/new-listing" element={<NewListings />}/>
+            <Route path="dashboard/submitted-listings" element={<SubmittedListings />}/>
+            <Route path="dashboard/queried-listings" element={<QueriedListings />} />
+            <Route path="dashboard/approved-listings" element={<ApprovedListings />} />
+            <Route path="dashboard/edit-existing-listings" element={<EditExistingListings />} />
+            <Route path="dashboard/letting-listings" element={<ListedListings />} />
+            <Route path="dashboard/rented-listings" element={<RentedListings />} />
+            <Route path="dashboard/deleted-listings" element={<DeletedListings />} />
         </Routes>
     );
 };

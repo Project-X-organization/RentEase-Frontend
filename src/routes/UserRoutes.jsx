@@ -8,19 +8,21 @@ import Feedback from "../screens/user/Feedback";
 import TermsAndConditions from "../screens/TermsAndConditions";
 import FrequentlyAskedQuestions from "../screens/FAQs";
 import ContactUs from "../screens/ContactUs";
+import PrivacyPolicy from "../screens/PrivacyPolicy";
 
 const UserRoutes = () => {
     return (
         <Routes>
             <Route index element={<LandingPage/>}/>
-            <Route path="/signup" element={<UserSignUp />}/>
-            <Route path="/login" element={<UserLogin />}/>
-            <Route path="/verifyOTP" element={<VerifyOTP />}/>
-            <Route path="/rental-agreement" element={<RentalAgreement />} />
-            <Route path="/feedback" element={<Feedback />}/>
+            <Route path="signup" element={<UserSignUp />}/>
+            <Route path="login" element={<UserLogin />}/>
+            <Route path="verifyOTP" element={<VerifyOTP />}/>
+            <Route path="rental-agreement" element={<RentalAgreement />} />
+            <Route path="feedback" element={<Feedback />}/>
             <Route path="terms-and-conditions" element={<TermsAndConditions />} />
-            <Route path="/FAQs" element={<FrequentlyAskedQuestions />} />
-            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="FAQs" element={<FrequentlyAskedQuestions />} />
+            <Route path="contact-us" element={<ContactUs />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
     );
 };

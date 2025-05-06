@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Import icons for the menu toggle
 import TsAndCs from "../components/TermsAndConditions";
 import FadeInSection from "../components/FadeInSection";
+import { MdLibraryBooks } from "react-icons/md";
 
 const TermsAndConditions = () => {
     const [isOpen, setIsOpen] = useState(false);

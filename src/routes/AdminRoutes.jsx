@@ -4,7 +4,7 @@ import AdminDashboard from "../screens/admin/Dashboard";
 const AdminRoutes = () => {
     return (
         <Routes>
-            <Route path="/dashboard" element={<AdminDashboard />} />
+            <Route path="dashboard" element={<AdminDashboard />} />
         </Routes>
     );
 };
