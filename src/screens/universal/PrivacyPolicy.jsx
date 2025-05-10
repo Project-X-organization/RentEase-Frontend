@@ -1,5 +1,5 @@
-import Navbar from "../components/agent/NavBarAlt";
-import FadeInSection from "../components/FadeInSection";
+import Navbar from "../../components/agent/NavBarAlt";
+import FadeInSection from "../../components/universal/FadeInSection";
 
 const PrivacyPolicy = () => {
     return (

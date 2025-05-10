@@ -5,7 +5,7 @@ import SideBar from "../../components/admin/Sidebar";
 import Home from "../../components/admin/Home";
 import ProfilePage from "../../components/admin/Profile";
 import Payment from "../../components/admin/Payment/PaymentSection";
-import FadeInSection from "../../components/FadeInSection";
+import FadeInSection from "../../components/universal/FadeInSection";
 
 const AdminDashboard = () => {
     const menus = [

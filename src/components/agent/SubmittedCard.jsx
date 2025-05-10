@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import FadeInSection from "../FadeInSection";
+import FadeInSection from "../universal/FadeInSection";
 
 const SubmittedCard = ({ image, title, location, duration, delay }) => {
     return (

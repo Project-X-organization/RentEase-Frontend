@@ -20,7 +20,7 @@ const UserLogin = () => {
     {
         console.log("User Login successful", data);
         alert("User Login successful");
-        navigate("/home");//navigate to home page
+        navigate("/user/home");//navigate to home page
     };
 
     return (
@@ -34,7 +34,7 @@ const UserLogin = () => {
                     <Link to="#" className="text-[#428242] hover:text-lg hover:text-green-800">Forgot Password?</Link>
                 </div>
                 <BottomButtons label="Login"/>
-                <p className="text-center lg:text-lg mb-12 mt-[-40px]">Don't have an account? <Link to="/signup" className="text-[#428242] hover:text-xl hover:text-green-800">Sign up</Link></p>
+                <p className="text-center lg:text-lg mb-12 mt-[-40px]">Don't have an account? <Link to="/user/signup" className="text-[#428242] hover:text-xl hover:text-green-800">Sign up</Link></p>
             </form>
         </FormContainer>
     );

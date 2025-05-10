@@ -1,5 +1,5 @@
 import { Eye, X } from "lucide-react";
-import FadeInSection from "../../FadeInSection";
+import FadeInSection from "../../universal/FadeInSection";
 
 const Approved = ({name, approved_at, payment_proof, index, activeModalIndex, setActiveModalIndex }) => {
     const isActive = activeModalIndex === index;

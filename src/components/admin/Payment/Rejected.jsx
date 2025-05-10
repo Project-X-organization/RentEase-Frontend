@@ -1,6 +1,6 @@
 import { Eye, X } from "lucide-react";
 import { useState } from "react";
-import FadeInSection from "../../FadeInSection";
+import FadeInSection from "../../universal/FadeInSection";
 
 const Rejected = ({name, rejected_at, payment_proof, reason}) => {
     const [showPaymentProofModal, setShowPaymentProofModal] = useState(false);

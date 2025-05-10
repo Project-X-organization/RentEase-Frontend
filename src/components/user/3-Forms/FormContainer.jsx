@@ -1,6 +1,6 @@
 const FormContainer = ({children}) => {
     return (
-        <div className="h-auto min-h-screen bg-[url('/form-bg.jfif')] bg-cover bg-center relative flex items-start">
+        <div className="h-auto min-h-screen bg-[url('/form-bf.jpg')] bg-cover bg-center relative flex items-start">
             {/*Gray overlay */}
             <div className="absolute inset-0 bg-gray-500 bg-opacity-50"></div>
             <div className="relative z-10 w-full px-4 pb-4 lg:px-4 mx-auto lg:mx-0 lg:pb-8">

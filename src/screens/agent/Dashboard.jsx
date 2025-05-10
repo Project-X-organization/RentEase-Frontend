@@ -3,7 +3,7 @@ import Navbar from "../../components/agent/NavBar";
 import Header from "../../components/agent/Header";
 import Card from "../../components/agent/Dashboard/Card";
 import Footer from "../../components/agent/Dashboard/Footer";
-import FadeInSection from "../../components/FadeInSection";
+import FadeInSection from "../../components/universal/FadeInSection";
 
 // Main Component
 export default function AgentDashboard({ agent="MyCareTaker@gmail.com", user="Esther Oyedeji" }) {

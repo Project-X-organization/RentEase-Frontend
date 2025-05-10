@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "../../components/agent/NavBar";
 import Header from "../../components/agent/Header";
-import FadeInSection from "../../components/FadeInSection";
+import FadeInSection from "../../components/universal/FadeInSection";
 import { MoveRightIcon, ChevronLeft, MoveDownIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";

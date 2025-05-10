@@ -7,10 +7,11 @@ export default function Footer() {
           <img src="/footer-logo.png" alt="Footer Logo" className="w-48 h-auto mb-5 lg:ml-8 mt-5" />
           <div className="flex flex-col space-y-2 ml-4">
             <h3 className="font-bold">Quick Links</h3>
+            <Link to="/help" className="hover:text-black hover:text-sm lg:hover:text-xl">Help</Link>
             <Link to="/about" className="hover:text-black hover:text-sm lg:hover:text-xl">About Us</Link>
-            <Link to="/faqs" className="hover:text-black hover:text-sm lg:hover:text-xl">FAQs</Link>
-            <Link to="/terms" className="hover:text-black hover:text-sm lg:hover:text-xl">Terms & Conditions</Link>
-            <Link to="/privacy" className="hover:text-black hover:text-sm lg:hover:text-xl">Privacy Policy</Link>
+            <Link to="/FAQs" className="hover:text-black hover:text-sm lg:hover:text-xl">FAQs</Link>
+            <Link to="/terms-and-conditions" className="hover:text-black hover:text-sm lg:hover:text-xl">Terms & Conditions</Link>
+            <Link to="/privacy-policy" className="hover:text-black hover:text-sm lg:hover:text-xl">Privacy Policy</Link>
           </div>
           <div className="flex flex-col space-y-2 ml-4">
             <h3 className="font-bold">Stay Connected</h3>
@@ -21,9 +22,9 @@ export default function Footer() {
           </div>
           <div className="flex flex-col space-y-2 ml-4">
             <h3 className="font-bold">Contact Us</h3>
-            <Link className="hover:text-black hover:text-sm lg:hover:text-xl">Email</Link>
-            <Link className="hover:text-black hover:text-sm lg:hover:text-xl">Phone</Link>
-            <Link className="hover:text-black hover:text-sm lg:hover:text-xl">Address</Link>
+            <Link to="/contact-us" className="hover:text-black hover:text-sm lg:hover:text-xl">Email</Link>
+            <Link to="/contact-us" className="hover:text-black hover:text-sm lg:hover:text-xl">Phone</Link>
+            <Link to="/contact-us" className="hover:text-black hover:text-sm lg:hover:text-xl">Address</Link>
           </div>
         </div>
       </footer>

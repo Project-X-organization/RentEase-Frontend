@@ -3,7 +3,7 @@
   import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
   import { UserRoundPen, Edit2 } from 'lucide-react';
-  import FadeInSection from '../FadeInSection';
+  import FadeInSection from '../universal/FadeInSection';
 
   const ProfilePage = () => {
     const [profileImage, setProfileImage] = useState(null);           // preview image

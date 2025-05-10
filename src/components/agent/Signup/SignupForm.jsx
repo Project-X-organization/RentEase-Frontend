@@ -153,7 +153,7 @@ export default function SignupForm() {
             {/* Terms & Conditions */}
             <p className="text-sm text-gray-500 text-center mt-4 mb-4">
               By clicking "Continue" you acknowledge that you have read and understood{" "}
-              <Link to="#" className="text-blue-500 underline">Terms & Conditions</Link>
+              <Link to="/terms-and-conditions" className="text-blue-500 underline">Terms & Conditions</Link>
             </p>
             
             <p className="text-center lg:text-lg mb-12 mt-410px]">Already have an account? <Link to="/agent/login" className="text-[#428242] font-semibold hover:text-xl hover:text-green-800">Login</Link></p>

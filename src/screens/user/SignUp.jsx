@@ -35,7 +35,7 @@ const UserSignUp = () => {
     {
         console.log("User Account Creation successful", data);
         alert("User Account Creation successful");
-        navigate("/verifyOTP");//navigate to OTP vVerification page
+        navigate("/user/verifyOTP");//navigate to OTP vVerification page
     };
 
     return (
@@ -54,7 +54,7 @@ const UserSignUp = () => {
                 />
                 <p className="text-sm lg:text-lg text-black">if you do not wish to receive marketing information about our products and special offers, please check this box</p></div>
                 <BottomButtons label="Create Account"/>
-                <p className="text-center lg:text-lg mb-12 mt-[-40px]">Already have an account? <Link to="/login" className="text-green-500 hover:text-xl hover:text-green-800">Login</Link></p>
+                <p className="text-center lg:text-lg mb-12 mt-[-40px]">Already have an account? <Link to="/user/login" className="text-green-500 hover:text-xl hover:text-green-800">Login</Link></p>
             </form>
         </FormContainer>
     );

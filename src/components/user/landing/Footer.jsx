@@ -7,10 +7,11 @@ export default function Footer() {
           <div className="flex text-white font-bold lg:text-xl"><img src="/icon.png" className="lg:w-[10%] lg:h-[40%] w-[24%] h-[20%] "/><p className="lg:mt-8 lg:ml-2 mt-3 mr-2">MyCareTaker</p></div>
           <div className="flex flex-col space-y-2 ml-4">
             <h3 className="font-bold">Quick Links</h3>
+            <Link to="/help" className="hover:text-black hover:text-sm lg:hover:text-xl">Help</Link>
             <Link to="/about" className="hover:text-black hover:text-sm lg:hover:text-xl">About Us</Link>
-            <Link to="/faqs" className="hover:text-black hover:text-sm lg:hover:text-xl">FAQs</Link>
-            <Link to="/terms" className="hover:text-black hover:text-sm lg:hover:text-xl">Terms & Conditions</Link>
-            <Link to="/privacy" className="hover:text-black hover:text-sm lg:hover:text-xl">Privacy Policy</Link>
+            <Link to="/FAQs" className="hover:text-black hover:text-sm lg:hover:text-xl">FAQs</Link>
+            <Link to="/terms-and-conditions" className="hover:text-black hover:text-sm lg:hover:text-xl">Terms & Conditions</Link>
+            <Link to="/privacy-policy" className="hover:text-black hover:text-sm lg:hover:text-xl">Privacy Policy</Link>
           </div>
           <div className="flex flex-col space-y-2 ml-4">
             <h3 className="font-bold">Stay Connected</h3>
@@ -21,9 +22,9 @@ export default function Footer() {
           </div>
           <div className="flex flex-col space-y-2 ml-4">
             <h3 className="font-bold">Contact Us</h3>
-            <Link className="hover:text-black hover:text-sm lg:hover:text-xl">Email</Link>
-            <Link className="hover:text-black hover:text-sm lg:hover:text-xl">Phone</Link>
-            <Link className="hover:text-black hover:text-sm lg:hover:text-xl">Address</Link>
+            <Link to="/contact-us" className="hover:text-black hover:text-sm lg:hover:text-xl">Email</Link>
+            <Link to="/contact-us" className="hover:text-black hover:text-sm lg:hover:text-xl">Phone</Link>
+            <Link to="/contact-us" className="hover:text-black hover:text-sm lg:hover:text-xl">Address</Link>
           </div>
         </div>
       </footer>

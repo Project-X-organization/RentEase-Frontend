@@ -9,7 +9,7 @@ const VerifyOTP = () => {
         console.log("OTP entered:", otp);
         // Perform OTP verification logic here (e.g., API call)
         alert("Email verified successfully!");
-        navigate("/login");
+        navigate("/user/login");
     };
 
     return (

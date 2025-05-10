@@ -1,5 +1,5 @@
 import { Check, X, Eye } from "lucide-react";
-import FadeInSection from "../FadeInSection";
+import FadeInSection from "../universal/FadeInSection";
 
 const Pending = ({name, setOpacity}) => {
     const showCustomAlert = () => {

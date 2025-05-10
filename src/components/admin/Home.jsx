@@ -2,7 +2,7 @@ import Pending from "./Pending";
 import Approved from "./Approved";
 import Deleted from "./Deleted";
 import { useState } from "react";
-import FadeInSection from "../FadeInSection";
+import FadeInSection from "../universal/FadeInSection";
 
 const Home = ( { setOpacity }) => {
     const sections = [

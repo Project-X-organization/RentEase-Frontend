@@ -2,7 +2,7 @@ import Pending from "./Pending";
 import Approved from "./Approved";
 import Rejected from "./Rejected";
 import { useState } from "react";
-import FadeInSection from "../../FadeInSection";
+import FadeInSection from "../../universal/FadeInSection";
 
 const Payment = ( { setOpacity }) => {
     const sections = [

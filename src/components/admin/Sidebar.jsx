@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { UserRound, LogOut } from "lucide-react";
-import FadeInSection from "../FadeInSection";
+import FadeInSection from "../universal/FadeInSection";
 
 const SideBar = ({menus, activeIndex, setActiveIndex, admin, className}) => {
     return (

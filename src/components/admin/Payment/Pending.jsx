@@ -1,6 +1,6 @@
 import { Check, X, Eye } from "lucide-react";
 import { useState } from "react";
-import FadeInSection from "../../FadeInSection";
+import FadeInSection from "../../universal/FadeInSection";
 
 const Pending = ({name, transaction_id, description, transaction_date, value, payment_proof, setOpacity}) => {
 

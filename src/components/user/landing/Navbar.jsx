@@ -16,16 +16,16 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-32 mt-2 text-green-200">
-          <Link to="/" className="text-sm font-bold text-white hover:text-green-200 hover:scale-110">Home</Link>
-          <Link to="/property" className="text-sm font-bold text-white hover:text-green-200 hover:scale-110">Property</Link>
-          <Link to="/product" className="text-sm font-bold text-white hover:text-green-200 hover:scale-110">Product</Link>
-          <Link to="/contact" className="text-sm font-bold text-white hover:text-green-200 hover:scale-110">Contact</Link>
+          <Link to="/" className="text-sm font-bold text-green-300 scale-110">Home</Link>
+          <Link to="/property" className="text-sm font-bold text-white hover:text-green-300 hover:scale-110">Property</Link>
+          <Link to="/product" className="text-sm font-bold text-white hover:text-green-300 hover:scale-110">Product</Link>
+          <Link to="/contact-us" className="text-sm font-bold text-white hover:text-green-300 hover:scale-110">Contact</Link>
         </div>
 
         {/* Desktop Buttons */}
         <div className="hidden lg:block">
           <Link to="/agent/signup" className="text-sm text-white bg-[#015A05] px-4 py-2 rounded-md hover:bg-green-900 hover:px-6 hover:py-4">Agent</Link>
-          <Link to="/login" className="text-sm ml-2 text-white border border-[#58FA60] px-4 py-2 rounded-md hover:text-green-200 hover:px-6 hover:py-4">Login</Link>
+          <Link to="/user/login" className="text-sm ml-2 text-white border border-[#58FA60] px-4 py-2 rounded-md hover:text-green-200 hover:px-6 hover:py-4">Login</Link>
         </div>
 
         {/* Mobile Menu Toggle Button */}
@@ -38,15 +38,15 @@ const Navbar = () => {
 
         {/* Mobile Dropdown Menu */}
         <div className={`absolute top-24 left-0 w-full bg-gray-900 bg-opacity-90 flex flex-col items-center py-6 space-y-6 text-white lg:hidden transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
-          <Link to="/" className="text-sm hover:text-green-400" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/" className="text-sm text-green-400 scale-110" onClick={() => setIsOpen(false)}>Home</Link>
           <Link to="/property" className="text-sm hover:text-green-400" onClick={() => setIsOpen(false)}>Property</Link>
           <Link to="/product" className="text-sm hover:text-green-400" onClick={() => setIsOpen(false)}>Product</Link>
-          <Link to="/contact" className="text-sm hover:text-green-400" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link to="/contact-us" className="text-sm hover:text-green-400" onClick={() => setIsOpen(false)}>Contact</Link>
 
           {/* Mobile Buttons */}
           <div className="flex flex-col space-y-4 mt-4">
             <Link to="/agent/signup" className="text-sm text-white bg-[#015A05] px-6 py-2 rounded-md hover:bg-green-900" onClick={() => setIsOpen(false)}>Agent</Link>
-            <Link to="/login" className="text-sm text-white border border-white px-6 py-2 rounded-md hover:text-green-200" onClick={() => setIsOpen(false)}>Login</Link>
+            <Link to="/user/login" className="text-sm text-white border border-white px-6 py-2 rounded-md hover:text-green-200" onClick={() => setIsOpen(false)}>Login</Link>
           </div>
         </div>
       </nav>
