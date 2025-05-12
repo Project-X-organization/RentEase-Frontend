@@ -1,4 +1,4 @@
-import FadeInSection from "../../FadeInSection";
+import FadeInSection from "../../universal/FadeInSection";
 const ServiceCard = ({ title, description, type, delay }) => {
     return (
       <FadeInSection type={type} delay={delay}><div className="lg:py-8 p-4 bg-white shadow-md rounded-md lg:text-lg hover:scale-105 hover:font-bold">

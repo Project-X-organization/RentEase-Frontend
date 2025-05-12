@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import FormContainer from "../../components/user/FormContainer";
-import FormField from "../../components/user/FormField";
-import BottomButtons from "../../components/user/BottomButtons";
+import FormContainer from "../../components/user/3-Forms/FormContainer";
+import FormField from "../../components/user/3-Forms/FormField";
+import BottomButtons from "../../components/user/3-Forms/BottomButtons";
+import { Link } from "react-router-dom";
 
 const schema = yup.object().shape({
     fullName: yup.string().required("Full Name is required"),
@@ -34,12 +35,12 @@ const UserSignUp = () => {
     {
         console.log("User Account Creation successful", data);
         alert("User Account Creation successful");
-        navigate("/login");//navigate to login page
+        navigate("/user/verifyOTP");//navigate to OTP vVerification page
     };
 
     return (
         <FormContainer>
-            <h1 className="text-center text-green-800 lg:text-4xl text-2xl font-bold my-8 lg:my-4 lg:mb-12">Create an account</h1>
+            <h1 className="text-center text-[#015A05] lg:text-4xl text-2xl font-bold my-8 lg:my-4 lg:mb-12">Create an account</h1>
             <form onSubmit={handleSubmit(onsubmit)} className="w-full mx-auto">
                 <FormField label="Full Name" placeholder="Enter your full name" name="fullName" register={register} errors={errors} />
                 <FormField label="Email Address" placeholder="Enter your email address" name="email" type="email" register={register} errors={errors} />
@@ -53,6 +54,7 @@ const UserSignUp = () => {
                 />
                 <p className="text-sm lg:text-lg text-black">if you do not wish to receive marketing information about our products and special offers, please check this box</p></div>
                 <BottomButtons label="Create Account"/>
+                <p className="text-center lg:text-lg mb-12 mt-[-40px]">Already have an account? <Link to="/user/login" className="text-green-500 hover:text-xl hover:text-green-800">Login</Link></p>
             </form>
         </FormContainer>
     );

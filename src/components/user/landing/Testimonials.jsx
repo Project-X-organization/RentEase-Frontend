@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -22,10 +22,22 @@ const TestimonialsSection = () => {
     },
   ];
 
+  const [activeIndex, setActiveIndex] = useState(0);
+        
+  // Auto-switching logic
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 4000); // switch every 4 seconds
+  
+    
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="lg:py-16">
       <h2 className="text-2xl lg:text-3xl font-bold text-center pt-8">Testimonials</h2>
-      <div className="flex flex-col my-4 lg:flex-row justify-center lg:space-x-6 mt-8 mx-auto w-[85%] ">
+      <div className="hidden lg:flex my-4 lg:flex-row justify-center lg:space-x-6 mt-8 mx-auto w-[85%] ">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg p-6 lg:w-80 lg:text-lg my-4 hover:scale-105 hover:font-bold">
             <p className="text-gray-600 italic">"{testimonial.message}"</p>
@@ -38,6 +50,37 @@ const TestimonialsSection = () => {
             </div>
           </div>
         ))}
+      </div>
+      {/* Mobile View - show one card at a time with sliding effect */}
+      <div className="block md:hidden overflow-hidden px-4">
+        <div
+          className="flex gap-4 transition-transform duration-700 ease-in-out w-full "
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white shadow-lg rounded-lg p-6 min-w-[95%] my-4 hover:scale-105 hover:font-bold">
+              <p className="text-gray-600 italic">"{testimonial.message}"</p>
+              <div className="flex mt-4">
+                <img src={testimonial.avatar} alt={testimonial.name} className="w-10 h-10 rounded-full mr-3" />
+                <div>
+                  <h3 className="lg:text-lg font-semibold">{testimonial.name}</h3>
+                  <p className="text-gray-500">{testimonial.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        {/* Dots */}
+        <div className="flex justify-center mt-4 space-x-2">
+          {testimonials.map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                index === activeIndex ? "bg-[#428242]" : "bg-gray-400"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

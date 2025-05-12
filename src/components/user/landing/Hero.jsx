@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import FadeInSection from "../../FadeInSection";
+import FadeInSection from "../../universal/FadeInSection";
 
 const HeroSection = () => {
   return (
@@ -16,13 +16,13 @@ const HeroSection = () => {
           </h1>
 
           {/* Responsive Paragraph */}
-          <p className="lg:mt-6 mt-8 text-md sm:text-lg lg:text-2xl text-center lg:text-left text-gray-200 w-full lg:w-[65%] mx-auto lg:ml-12">
+          <p className="lg:mt-6 mt-8 text-base sm:text-lg lg:text-2xl text-center lg:text-left text-gray-200 w-full lg:w-[65%] mx-auto lg:ml-12">
             Discover affordable and comfortable homes tailored to your needs. Rent with ease, live with peace.
           </p>
 
           {/* Responsive Button Container */}
           <div className="flex justify-center lg:justify-start lg:mt-0 mt-12  lg:ml-12">
-            <Link to="/signup" className="lg:mt-12 px-4 py-2 sm:px-6 sm:py-3 lg:px-6 lg:py-3 bg-green-600 border border-white rounded-md text-sm sm:text-base lg:text-xl text-white hover:bg-green-900 hover:px-6 hover:py-4 lg:hover:px-12 lg:hover:py-6 transition-all duration-300">
+            <Link to="/user/signup" className="lg:mt-12 px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-white border border-white rounded-md text-sm sm:text-base lg:text-sm text-[#019208] font-bold hover:bg-green-200 hover:px-6 hover:py-4 lg:hover:px-12 lg:hover:py-6 transition-all duration-300">
               Get Started
             </Link>
           </div>

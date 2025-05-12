@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import UploadBox from "../../components/agent/Verification/UploadBox";
 import FormField from "../../components/agent/Verification/FormField";
 
@@ -27,7 +28,7 @@ export default function AgentVerification() {
             Your uploaded documents will be reviewed, and you will receive an email confirmation within 48 hours.
           </p>*/}
 
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-600 mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#428242] mb-6 sm:mb-8">
             Kindly Upload Documents for Verification
           </h2>
 
@@ -69,12 +70,12 @@ export default function AgentVerification() {
             </div>
 
             {/* Buttons */}
-            <div className="mt-6 lg:w-[65%]">
-              <button type="submit" className="w-full bg-blue-600 text-white text-lg font-semibold py-3 rounded-lg hover:bg-blue-900 hover:scale-105">                Submit for Review
+            <div className="lg:mt-6 lg:w-[65%]">
+              <button type="submit" className="w-full bg-[#428242] text-white lg:text-lg font-semibold py-3 rounded hover:bg-green-900 hover:scale-105">                Submit for Review
               </button>
-              <button type="button" className="w-full bg-gray-200 text-blue-600 mt-3 py-2 rounded-lg text-lg hover:bg-gray-100 hover:scale-105">
-                <a href="/">Back to Sign up</a>
-              </button>
+              <Link to="/agent/signup"><button type="button" className="w-full border border-[#14AE5C] text-[#428242] rounded mt-3 lg:py-3 py-2 lg:text-lg hover:bg-gray-50 hover:scale-105">
+                Back to Sign up
+              </button></Link>
             </div>
           </form>
         </div>

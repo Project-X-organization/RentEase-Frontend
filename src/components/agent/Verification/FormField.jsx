@@ -6,7 +6,7 @@ export default function FormField({ label, placeholder, options, register, name,
         {options ? (
           <select
             {...register(name, required ? { required: `${label} is required` } : {})}
-            className="w-full border border-gray-300 rounded p-2"
+            className="w-full border border-[#14AE5C] rounded p-2"
           >
             <option value="">Select one</option>
             {options.map((option, index) => (
@@ -17,7 +17,7 @@ export default function FormField({ label, placeholder, options, register, name,
           <input
             type="text"
             {...register(name, required ? { required: `${label} is required` } : {})}
-            className="w-full border border-gray-300 rounded p-2"
+            className="w-full border border-[#14AE5C] rounded p-2"
             placeholder={placeholder}
           />
         )}

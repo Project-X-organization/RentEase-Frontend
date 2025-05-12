@@ -1,5 +1,5 @@
 import ServiceCard from "./ServicesCard";
-import FadeInSection from "../../FadeInSection";
+import FadeInSection from "../../universal/FadeInSection";
 
 const ServicesSection = () => {
   const services = [

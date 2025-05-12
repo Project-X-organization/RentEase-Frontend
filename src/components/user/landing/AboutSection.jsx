@@ -17,7 +17,7 @@ const AboutSection = () => {
                     {/* Responsive Button */}
                     <Link 
                         to="/about" 
-                        className="mb-8 lg:text-xl mt-6 lg:mt-20 px-4 py-2 sm:px-6 sm:py-3 lg:px-6 lg:py-3 bg-green-600 rounded-md border border-black shadow-xl text-sm sm:text-base lg:text-lg text-white hover:bg-green-900 hover:px-8 hover:py-4 lg:hover:px-12 lg:hover:py-8 transition-all duration-300 block w-max mx-auto lg:mx-14"
+                        className="mb-8 lg:text-lg mt-6 lg:mt-20 px-4 py-2 sm:px-6 sm:py-3 lg:px-6 lg:py-3 bg-[#015A05] rounded-md border border-black shadow-xl text-sm sm:text-base lg:text-lg text-white hover:bg-green-900 hover:px-8 hover:py-4 lg:hover:px-12 lg:hover:py-8 transition-all duration-300 block w-max mx-auto lg:mx-14"
                     >
                         Learn More
                     </Link>

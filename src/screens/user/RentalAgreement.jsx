@@ -22,11 +22,11 @@ export default function RentalAgreement() {
 
   return (
     <div className="min-h-screen bg-gray-50 p-2 lg:p-8 flex justify-center">
-      <div className="bg-white max-w-6xl w-full mx-auto p-2 lg:p-8 shadow-md rounded-lg">
+      <div className="bg-white max-w-6xl w-full mx-auto p-4 lg:p-8 shadow-md rounded-lg">
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between lg:items-center mb-6">
           <img src="/logo.png" alt="Logo" className="w-28 lg:w-48 h-auto mb-4 mx-auto lg:ml-2" />
-          <h1 className="lg:text-3xl text-2xl font-bold text-green-600 text-center">RENTAL AGREEMENT</h1>
+          <h1 className="lg:text-3xl text-2xl font-bold text-[#428242] text-center">RENTAL AGREEMENT</h1>
         </div>
 
         {/* "For Address" */}
@@ -161,7 +161,7 @@ export default function RentalAgreement() {
 
           {/* Buttons */}
           <div className="flex flex-col md:flex-row lg:flex-col gap-4 mt-6 justify-center items-center">
-            <button type="submit" className="w-full md:w-auto lg:w-[60%] bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 hover:scale-110">
+            <button type="submit" className="w-full md:w-auto lg:w-[60%] bg-[#015A05] text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 hover:scale-110">
               Proceed to Payment
             </button>
             <button className="w-full md:w-auto lg:w-[60%] bg-green-200 text-green-700 font-semibold py-3 px-6 rounded-lg hover:bg-green-400 hover:scale-110">
