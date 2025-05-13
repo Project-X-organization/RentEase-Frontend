@@ -1,8 +1,69 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from 'react';
+import { ChevronDown } from 'lucide-react';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
+  const [isPropertyDropdownOpen, setIsPropertyDropdownOpen] = useState(false);
+  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
+  const propertydropdownRef = useRef(null);
+  const productdropdownRef = useRef(null);
+
+  const properties = [
+      {name: "Bungalow"},
+      {name: "Two Bedroom"},
+      {name: "Self contain"},
+      {name: "Duplex"},
+      {name: "One Bedroom"},
+      {name: "Shared Apartment"},
+  ]
+
+  const products = [
+    {name: "How it works", path: "#"},
+    {name: "Customer Support", path: "/contact-us"},
+  ]
+
+  const togglePropertyDropdown = () => setIsPropertyDropdownOpen((prev) => !prev);
+  const toggleProductDropdown = () => setIsProductDropdownOpen((prev) => !prev);
+
+  // Close Property dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutsideProperty = (event) => {
+      if (
+        propertydropdownRef.current &&
+        !propertydropdownRef.current.contains(event.target)
+      ) {
+        setIsPropertyDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutsideProperty);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutsideProperty);
+    };
+  }, []);
+
+  // Close Product dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutsideProduct = (event) => {
+      if (
+        productdropdownRef.current &&
+        !productdropdownRef.current.contains(event.target)
+      ) {
+        setIsProductDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutsideProduct);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutsideProduct);
+    };
+  }, []);
+
 
   return (
     <>
@@ -17,8 +78,50 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-32 mt-2 text-green-200">
           <Link to="/" className="text-sm font-bold text-green-300 scale-110">Home</Link>
-          <Link to="/property" className="text-sm font-bold text-white hover:text-green-300 hover:scale-110">Property</Link>
-          <Link to="/product" className="text-sm font-bold text-white hover:text-green-300 hover:scale-110">Product</Link>
+          <div className="relative" ref={propertydropdownRef}>
+        <button
+          onClick={togglePropertyDropdown}
+          className={`flex items-center gap-1 text-sm font-bold text-white hover:text-green-300 hover:scale-110 focus:outline-none ${isPropertyDropdownOpen ? "text-green-300 scale-110": ""}`}
+        >
+          property
+          <ChevronDown className="w-4 h-4" />
+        </button>
+
+        {isPropertyDropdownOpen && (
+          <div className="absolute top-full -right-16 mt-2 w-48 bg-white border rounded-md overflow-y-auto shadow-lg z-50">{properties.map((property, index) => (
+            <ul className="py-1" key={index}>
+              <li>
+                <Link
+                  to="#"
+                  className="block px-4 py-2 text-sm text-gray-700 bg-white hover:bg-green-500 rounded-full text-center text-green-500 hover:font-bold hover:text-white border border-green-500"
+                >
+                  {property.name}
+                </Link>
+              </li>
+            </ul>))}</div>)}
+        </div>
+        <div className="relative" ref={productdropdownRef}>
+        <button
+          onClick={toggleProductDropdown}
+          className={`flex items-center gap-1 text-sm font-bold text-white hover:text-green-300 hover:scale-110 focus:outline-none ${isProductDropdownOpen ? "text-green-300 scale-110": ""}`}
+        >
+          product
+          <ChevronDown className="w-4 h-4" />
+        </button>
+
+        {isProductDropdownOpen && (
+          <div className="absolute top-full -right-16 mt-2 w-48 bg-white border rounded-md overflow-y-auto shadow-lg z-50">{products.map((product, index) => (
+            <ul className="py-1" key={index}>
+              <li>
+                <Link
+                  to={product.path}
+                  className="block px-4 py-2 text-sm text-gray-700 bg-white hover:bg-green-500 rounded-full text-center text-green-500 hover:font-bold hover:text-white border border-green-500"
+                >
+                  {product.name}
+                </Link>
+              </li>
+            </ul>))}</div>)}
+        </div>
           <Link to="/contact-us" className="text-sm font-bold text-white hover:text-green-300 hover:scale-110">Contact</Link>
         </div>
 
@@ -39,8 +142,50 @@ const Navbar = () => {
         {/* Mobile Dropdown Menu */}
         <div className={`absolute top-24 left-0 w-full bg-gray-900 bg-opacity-90 flex flex-col items-center py-6 space-y-6 text-white lg:hidden transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
           <Link to="/" className="text-sm text-green-400 scale-110" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/property" className="text-sm hover:text-green-400" onClick={() => setIsOpen(false)}>Property</Link>
-          <Link to="/product" className="text-sm hover:text-green-400" onClick={() => setIsOpen(false)}>Product</Link>
+          <div className="relative" ref={propertydropdownRef}>
+        <button
+          onClick={togglePropertyDropdown}
+          className={`flex items-center gap-1 text-sm text-white hover:text-green-400 hover:scale-110 focus:outline-none ${isPropertyDropdownOpen ? "text-green-400 scale-110": ""}`}
+        >
+          property
+          <ChevronDown className="w-4 h-4" />
+        </button>
+
+        {isPropertyDropdownOpen && (
+          <div className="absolute top-full -right-16 mt-2 w-48 bg-white border overflow-y-auto rounded-md shadow-lg z-50">{properties.map((property, index) => (
+            <ul className="py-1" key={index}>
+              <li>
+                <Link
+                  to="#"
+                  className="block px-4 py-2 text-sm text-gray-700 bg-white hover:bg-green-500 rounded-full text-center text-green-500 hover:font-bold hover:text-white border border-green-500"
+                >
+                  {property.name}
+                </Link>
+              </li>
+            </ul>))}</div>)}
+        </div>
+        <div className="relative" ref={productdropdownRef}>
+        <button
+          onClick={toggleProductDropdown}
+          className={`flex items-center gap-1 text-sm text-white hover:text-green-300 hover:scale-110 focus:outline-none ${isProductDropdownOpen ? "text-green-300 scale-110": ""}`}
+        >
+          product
+          <ChevronDown className="w-4 h-4" />
+        </button>
+
+        {isProductDropdownOpen && (
+          <div className="absolute top-full -right-16 mt-2 w-48 bg-white border rounded-md overflow-y-auto shadow-lg z-50">{products.map((product, index) => (
+            <ul className="py-1" key={index}>
+              <li>
+                <Link
+                  to={product.path}
+                  className="block px-4 py-2 text-sm text-gray-700 bg-white hover:bg-green-500 rounded-full text-center text-green-500 hover:font-bold hover:text-white border border-green-500"
+                >
+                  {product.name}
+                </Link>
+              </li>
+            </ul>))}</div>)}
+        </div>
           <Link to="/contact-us" className="text-sm hover:text-green-400" onClick={() => setIsOpen(false)}>Contact</Link>
 
           {/* Mobile Buttons */}
