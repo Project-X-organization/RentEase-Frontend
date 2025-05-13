@@ -168,7 +168,7 @@ const Help = () => {
                     </Link></FadeInSection>
                 </div>
             </FadeInSection>
-            <FadeInSection type="zoom" delay={5}><div className="w-full lg:pb-20 pb-12">
+            <FadeInSection type="zoom" delay={2}><div className="w-full lg:pb-20 pb-12">
                 <h2 className="lg:text-2xl text-xl font-semibold text-center lg:text-left lg:mb-12 mb-6 lg:ml-16">Recommended Topics</h2>
                 {/* Desktop View - show all 4 cards */}
                 <div className="hidden md:grid grid-cols-4 gap-4 justify-items-center">

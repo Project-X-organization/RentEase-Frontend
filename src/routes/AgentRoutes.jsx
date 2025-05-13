@@ -11,6 +11,7 @@ import EditExistingListings from "../screens/agent/EditExistingListings";
 import ListedListings from "../screens/agent/LettingListings";
 import RentedListings from "../screens/agent/RentedListings";
 import DeletedListings from "../screens/agent/DeletedListings";
+import EditProfile from "../screens/agent/EditProfile";
 
 const AgentRoutes = () => {
     return (
@@ -27,6 +28,7 @@ const AgentRoutes = () => {
             <Route path="dashboard/letting-listings" element={<ListedListings />} />
             <Route path="dashboard/rented-listings" element={<RentedListings />} />
             <Route path="dashboard/deleted-listings" element={<DeletedListings />} />
+            <Route path="dashboard/edit-profile" element={<EditProfile />} />
         </Routes>
     );
 };

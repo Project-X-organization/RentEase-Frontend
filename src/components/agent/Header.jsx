@@ -3,7 +3,7 @@ import { useState } from "react";
 import { MoreVertical, X, LogOut } from "lucide-react";
 
 // Header Component
-export default function Header({ agentEmail }) {
+export default function Header({ agentEmail, text="Manage Property " }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -11,7 +11,7 @@ export default function Header({ agentEmail }) {
       {/* Desktop Layout (Unchanged) */}
       <div className="hidden lg:grid grid-cols-[1fr_3fr] justify-items-start">
         <span className="font-semibold">Dashboard</span>
-        <button className="text-white">Manage Property ▾</button>
+        <button className="text-white">{`${text}▾`}</button>
       </div>
 
       <div className="hidden lg:grid lg:text-right grid-cols-[4fr_1fr]">
@@ -33,7 +33,7 @@ export default function Header({ agentEmail }) {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="absolute z-10 top-14 right-4 bg-white text-[#428242] shadow-md rounded-md w-52 py-2 lg:hidden">
-          <Link to="#" className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Manage Property  ▾</Link>
+          <Link to="#" className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>{`${text}▾`}</Link>
           <span className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}>Agent: {agentEmail}</span>
           <Link to="/" className="block flex px-4 py-2 hover:bg-gray-100" onClick={() => setIsOpen(false)}><span className="mr-2">Logout </span><LogOut/></Link>
         </div>
