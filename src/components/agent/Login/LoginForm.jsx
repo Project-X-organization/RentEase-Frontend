@@ -48,7 +48,7 @@ export default function LoginForm() {
             </div>
 
             <div className="flex justify-end text-md">
-              <Link to="#" className="text-[#428242] hover:text-lg hover:text-green-800">Forgot Password?</Link>
+              <Link to="/agent/forgot-password" className="text-[#428242] hover:text-lg hover:text-green-800">Forgot Password?</Link>
             </div>
 
             <button

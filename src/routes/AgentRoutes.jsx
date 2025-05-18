@@ -12,6 +12,8 @@ import ListedListings from "../screens/agent/LettingListings";
 import RentedListings from "../screens/agent/RentedListings";
 import DeletedListings from "../screens/agent/DeletedListings";
 import EditProfile from "../screens/agent/EditProfile";
+import AgentForgotPassword from "../screens/agent/ForgotPassword";
+import AgentVerifyPassword from "../screens/agent/VerifyPassword";
 
 const AgentRoutes = () => {
     return (
@@ -19,6 +21,8 @@ const AgentRoutes = () => {
             <Route path="signup" element={<AgentSignup/>} />
             <Route path="login" element={<AgentLogin/>} />
             <Route path="verification" element={<AgentVerification/>} />
+            <Route path="forgot-password" element={<AgentForgotPassword />} />
+            <Route path="verify-password" element={<AgentVerifyPassword />} />
             <Route path="dashboard" element={<AgentDashboard/>} />
             <Route path="dashboard/new-listing" element={<NewListings />}/>
             <Route path="dashboard/submitted-listings" element={<SubmittedListings />}/>

@@ -1,6 +1,15 @@
-import SignupForm from "../../components/agent/Signup/SignupForm";
+import { useNavigate } from "react-router-dom";
+import OTPVerification from "../../components/agent/password/VerifyPassword";
 
-export default function AgentSignup() {
+export default function AgentVerifyPassword() {
+    const navigate = useNavigate();
+
+    const handleOTPVerification = (otp) => {
+        console.log("OTP entered:", otp);
+        // Perform OTP verification logic here (e.g., API call)
+        alert("Email verified successfully!");
+        navigate("/agent/login");
+    };
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
       {/* Left Side (Logo + Banner) */}
@@ -19,9 +28,9 @@ export default function AgentSignup() {
       </div>
 
       {/* Right Side - Signup Form (Full Height & Width) */}
-      <div className="lg:w-1/2 flex items-center justify-center">
+      <div className="md:w-1/2 flex justify-center">
         <div className="w-full h-full">
-          <SignupForm />
+            <OTPVerification onVerify={handleOTPVerification} email="MyCar***ker@gmail.com" title="Password Change" buttonLabel="Password Change"/>
         </div>
       </div>
     </div>

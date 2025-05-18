@@ -1,6 +1,6 @@
-import SignupForm from "../../components/agent/Signup/SignupForm";
+import ForgotPasswordForm from "../../components/agent/password/ForgotPasswordForm";
 
-export default function AgentSignup() {
+export default function AgentForgotPassword() {
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
       {/* Left Side (Logo + Banner) */}
@@ -19,9 +19,9 @@ export default function AgentSignup() {
       </div>
 
       {/* Right Side - Signup Form (Full Height & Width) */}
-      <div className="lg:w-1/2 flex items-center justify-center">
+      <div className="md:w-1/2 flex justify-center">
         <div className="w-full h-full">
-          <SignupForm />
+          <ForgotPasswordForm/>
         </div>
       </div>
     </div>

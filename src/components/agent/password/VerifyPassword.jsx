@@ -1,7 +1,7 @@
 import { button } from "framer-motion/client";
 import { useState } from "react";
 
-const OTPVerification = ({ onVerify, email, title="Your Email", buttonLabel="Email"}) => {
+const OTPVerification = ({ onVerify, email, title, buttonLabel}) => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
 
   // Handle input change
@@ -37,9 +37,9 @@ const OTPVerification = ({ onVerify, email, title="Your Email", buttonLabel="Ema
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full ">
-      <h2 className="text-3xl lg:text-4xl text-[#015A05] font-semibold mt-4">Verify {title}</h2>
-      <h3 className="lg:text-xl w-[70%] text-center my-6 lg:my-12">Enter The Six Digit Code That Was Sent To {email}</h3>
+    <div className="w-full h-full lg:py-16 py-2"><div className="flex flex-col shadow-md rounded-lg items-center h-full py-12">
+      <h2 className="text-3xl lg:text-5xl text-[#428242] font-bold mt-4">Verify {title}</h2>
+      <h3 className="w-[80%] text-base lg:text-2xl text-gray-500 text-center my-6 lg:my-12">Enter The Six Digit Code That Was Sent To {email}</h3>
       <form onSubmit={handleSubmit} className="flex gap-2">
         {otp.map((value, index) => (
           <input
@@ -57,11 +57,11 @@ const OTPVerification = ({ onVerify, email, title="Your Email", buttonLabel="Ema
       <button className="w-[65%] p-2 lg:p-4 bg-gray-100 mt-8 lg:mt-12 hover:bg-gray-300 lg:text-lg">Resend Code</button>
       <button
         onClick={handleSubmit}
-        className="mt-4 lg:px-6 p-2 lg:py-4 w-[65%] bg-[#015A05] text-white lg:text-lg rounded hover:bg-green-800 hover:scale-110"
+        className="mt-4 lg:px-6 p-2 lg:py-4 w-[65%] bg-[#015A05] text-white lg:text-lg font-semibold rounded hover:bg-green-700 hover:scale-110"
       >
         Confirm {buttonLabel}
       </button>
-    </div>
+    </div></div>
   );
 };
 

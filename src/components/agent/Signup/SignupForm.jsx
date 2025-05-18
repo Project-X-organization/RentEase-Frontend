@@ -21,6 +21,7 @@ const schema = yup.object().shape({
   password: yup
     .string()
     .min(6, "Password must be at least 6 characters")
+    .matches(/[A-Z]/, "Passwords must contain at least one uppercase letter").matches(/[a-z]/, "Passwords must contain at least one lowercase letter").matches(/[0-9]/, "Passwords must contain at least one digit").matches(/[@$!%*?&]/, "Passwords must contain at least one special character")
     .required("Password is required"),
   confirmPassword: yup
     .string()
@@ -146,7 +147,7 @@ export default function SignupForm() {
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className="w-full bg-[#428242] text-white rounded lg:py-3 py-2 text-base flex items-center justify-center gap-2 hover:scale-105 hover:bg-green-700 mt-2">
+            <button type="submit" className="w-full bg-[#428242] text-white rounded font-semibold lg:py-3 py-2 text-base flex items-center justify-center gap-2 hover:scale-105 hover:bg-green-700 mt-2">
               <FaRegCheckCircle /> Continue
             </button>
 

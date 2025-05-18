@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   
   const [isPropertyDropdownOpen, setIsPropertyDropdownOpen] = useState(false);
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
@@ -21,7 +23,7 @@ const Navbar = () => {
   ]
 
   const products = [
-    {name: "How it works", path: "#"},
+    {name: "How it works", path: "/help"},
     {name: "Customer Support", path: "/contact-us"},
   ]
 
@@ -110,16 +112,14 @@ const Navbar = () => {
         </button>
 
         {isProductDropdownOpen && (
-          <div className="absolute top-full -right-16 mt-2 w-48 bg-white border rounded-md overflow-y-auto shadow-lg z-50">{products.map((product, index) => (
-            <ul className="py-1" key={index}>
-              <li>
+          <div className={`absolute top-full -right-16 mt-2 w-48 bg-white border rounded-md overflow-y-auto shadow-lg z-50 transform transition-all duration-300 ease-out ${isProductDropdownOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'}`}>{products.map((product, index) => (
+            <ul className="py-1" key={index} onMouseDown={(e) => e.stopPropagation()}>
                 <Link
                   to={product.path}
                   className="block px-4 py-2 text-sm text-gray-700 bg-white hover:bg-green-500 rounded-full text-center text-green-500 hover:font-bold hover:text-white border border-green-500"
                 >
                   {product.name}
                 </Link>
-              </li>
             </ul>))}</div>)}
         </div>
           <Link to="/contact-us" className="text-sm font-bold text-white hover:text-green-300 hover:scale-110">Contact</Link>
