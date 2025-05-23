@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import FadeInSection from "../universal/FadeInSection";
 
-const SubmittedCard = ({ image, title, location, duration, delay }) => {
+const EditExistingCard = ({ image, title, location, duration, delay }) => {
     return (
       <div className="lg:px-12 px-4 lg:my-4 grid grid-cols-1 lg:grid-cols-[1fr_4fr] rounded-md w-full transition-all duration-300 ">
         <img src={image} alt={title} className="rounded-md mb-3 lg:mb-0 w-full h-44 lg:h-64 object-cover" />
@@ -26,7 +26,7 @@ const SubmittedCard = ({ image, title, location, duration, delay }) => {
                 {location}</p></div>
                 <div>
                     <div className="grid grid-cols-2 gap-4 text-center ">
-                        <Link to={`/agent/dashboard/submitted-listings/${title}/edit`} className="bg-[#428242] rounded-md lg:px-8 lg:py-4 py-2 lg:text-md text-white hover:scale-110 hover:bg-green-700">Edit</Link>
+                        <Link to={`/agent/dashboard/edit-existing-listings/${title}/edit`} className="bg-[#428242] rounded-md lg:px-8 lg:py-4 py-2 lg:text-md text-white hover:scale-110 hover:bg-green-700">Edit</Link>
                         <Link className="border border-black rounded-md text-red-500 lg:px-8 lg:py-4 py-2 lg:text-md hover:scale-110 hover:bg-[#EFFFF4]">Delete</Link>
                     </div>
                     <p className="text-right lg:mt-6 mt-2 text-sm lg:text-md">Uploaded {duration}</p>
@@ -38,5 +38,5 @@ const SubmittedCard = ({ image, title, location, duration, delay }) => {
     );
   };
   
-  export default SubmittedCard;
+  export default EditExistingCard;
   

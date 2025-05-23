@@ -1,4 +1,4 @@
-import SubmittedCard from "../../components/agent/SubmittedCard";
+import EditExistingCard from "../../components/agent/EditExistingCard";
 import Navbar from "../../components/agent/NavBarAlt";
 
 
@@ -17,7 +17,7 @@ const EditExistingListings = () => {
             <Navbar />
             <div className="w-full grid grid-cols-1 lg:my-12 my-4">
                 {submissions.map((submission, index) => (
-                    <SubmittedCard key={index} {...submission} />
+                    <EditExistingCard key={index} {...submission} />
                 ))}
             </div>
         </div>

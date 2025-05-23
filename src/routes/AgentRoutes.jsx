@@ -14,6 +14,8 @@ import DeletedListings from "../screens/agent/DeletedListings";
 import EditProfile from "../screens/agent/EditProfile";
 import AgentForgotPassword from "../screens/agent/ForgotPassword";
 import AgentVerifyPassword from "../screens/agent/VerifyPassword";
+import EditSubmissions from "../screens/agent/EditSubmissions";
+import EditListings from "../screens/agent/EditListings";
 
 const AgentRoutes = () => {
     return (
@@ -26,9 +28,11 @@ const AgentRoutes = () => {
             <Route path="dashboard" element={<AgentDashboard/>} />
             <Route path="dashboard/new-listing" element={<NewListings />}/>
             <Route path="dashboard/submitted-listings" element={<SubmittedListings />}/>
+            <Route path="dashboard/submitted-listings/:id/edit" element={<EditSubmissions />}/>
             <Route path="dashboard/queried-listings" element={<QueriedListings />} />
             <Route path="dashboard/approved-listings" element={<ApprovedListings />} />
             <Route path="dashboard/edit-existing-listings" element={<EditExistingListings />} />
+            <Route path="dashboard/edit-existing-listings/:id/edit" element={<EditListings />}/>
             <Route path="dashboard/letting-listings" element={<ListedListings />} />
             <Route path="dashboard/rented-listings" element={<RentedListings />} />
             <Route path="dashboard/deleted-listings" element={<DeletedListings />} />
