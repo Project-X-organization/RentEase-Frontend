@@ -1,5 +1,5 @@
   import React, { useState } from 'react';
-  import ReusableProfileSection from '../../components/admin/ReusableProfileSection';
+  import ReusableProfileSection from '../../components/admin/Profile/ReusableProfileSection';
   import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
   import { UserRoundPen, Edit2 } from 'lucide-react';

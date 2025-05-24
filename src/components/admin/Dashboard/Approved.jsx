@@ -1,5 +1,5 @@
 import { X, Eye } from "lucide-react";
-import FadeInSection from "../universal/FadeInSection";
+import FadeInSection from "../../universal/FadeInSection";
 
 const Approved = ({name, setOpacity}) => {
     const showCustomAlert = () => {

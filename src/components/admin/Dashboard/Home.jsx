@@ -2,7 +2,7 @@ import Pending from "./Pending";
 import Approved from "./Approved";
 import Deleted from "./Deleted";
 import { useState } from "react";
-import FadeInSection from "../universal/FadeInSection";
+import FadeInSection from "../../universal/FadeInSection";
 
 const Home = ( { setOpacity }) => {
     const sections = [
@@ -11,9 +11,9 @@ const Home = ( { setOpacity }) => {
         <span>Deleted</span>
     ]
     const requests = [
-        {name: "Elisha Olawoye"},
-        {name: "Obinna Chukwuemeka"},
-        {name: "Tolu Adebisi"},
+        {name: "Elisha Olawoye", transaction_id: "0000123", description: "No Description Provided", transaction_date: "20/04/2025", value: "700,000", payment_proof: "/House-2.png"},
+        {name: "Obinna Chukwuemeka", transaction_id: "0000124", description: "No Description Provided", transaction_date: "21/04/2025", value: "800,000", payment_proof: "/Form-banner.png"},
+        {name: "Tolu Adebisi", transaction_id: "0000128", description: "No Description Provided", transaction_date: "21/04/2025", value: "850,000", payment_proof: "/announcement.png"},
     ];
     const approvals = [
         {name: "Elisha Olawoye"},

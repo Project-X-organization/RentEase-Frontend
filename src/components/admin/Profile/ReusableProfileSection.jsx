@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Edit2 } from 'lucide-react';
-import FadeInSection from '../universal/FadeInSection';
+import FadeInSection from '../../universal/FadeInSection';
 
 // Utility function to convert PascalCase or camelCase to 'Pascal Case'
 const formatLabel = (key) => key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim();

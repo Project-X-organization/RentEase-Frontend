@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, User, LayoutDashboard, BriefcaseBusiness, Settings } from "lucide-react";
 import SideBar from "../../components/admin/Sidebar";
-import Home from "../../components/admin/Home";
-import ProfilePage from "../../components/admin/Profile";
+import Home from "../../components/admin/Dashboard/Home";
+import ProfilePage from "../../components/admin/Profile/Profile";
 import Payment from "../../components/admin/Payment/PaymentSection";
 import FadeInSection from "../../components/universal/FadeInSection";
 
@@ -12,7 +12,7 @@ const AdminDashboard = () => {
         <span className="flex"><LayoutDashboard className="mr-2 mt-1"/><span>Dashboard</span></span>,
         <span className="flex"><User className="mr-2 mt-1"/><span>Profile</span></span>,
         <span className="flex"><BriefcaseBusiness className="mr-2 mt-1"/><span>Payments</span></span>,
-        <span className="flex"><Settings className="mr-2 mt-1"/><span>Settings</span></span>
+        //<span className="flex"><Settings className="mr-2 mt-1"/><span>Settings</span></span>
     ];
     const [activeIndex, setActiveIndex] = useState(0);
     const [showSidebar, setShowSidebar] = useState(false);
